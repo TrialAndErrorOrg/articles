@@ -339,8 +339,8 @@
 \newfontfamily\openlight{Open Sans Light}
 
 \newfontfamily\overpass{Overpass}[
- %   Path={./OverpassFonts/},
- %   Extension={.ttf},
+    Path={./OverpassFonts/},
+    Extension={.ttf},
     BoldFont={*-SemiBold},
     UprightFont={*-Regular},
 ]
