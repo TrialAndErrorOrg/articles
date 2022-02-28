@@ -274,4 +274,4 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
-./issues/issue-2/mr2-maxwell/jote-new-article.cls
+#./issues/issue-2/mr2-maxwell/jote-new-article.cls
