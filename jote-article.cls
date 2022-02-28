@@ -8,7 +8,8 @@
 %
 %
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{jote-new-article}[2018/07/05, v1.5]
+\ProvidesClass{jote-new-article}[2022/03/01, v2.0]
+
 
 %% Definitions for adding journal elements
 \def\@jotetitle{}
@@ -151,7 +152,7 @@
 \ProcessOptions\relax
 
 
-\LoadClass[twocolumn]{article}
+\LoadClass[twocolumn,12]{article}
 
 \RequirePackage{scrextend}
 \RequirePackage{trace}
@@ -202,7 +203,7 @@
 
 \colorlet{lightblack}{jotedark!70}
 
-\RequirPackage{monotype}
+\RequirePackage{microtype}
 
 %\if@twocolumn
 %\else
@@ -322,27 +323,38 @@
 %SmallCapsFont = {Alegreya Sans},
 %SmallCapsFeatures={Letters=SmallCaps}
 %]{Open Sans Regular}
-\setmainfont{Open Sans Light}[
+\setmainfont{OpenSans}[
 %Scale={0.85},
-SmallCapsFont={Noto Sans},
-%BoldSmallCapsFont= {Noto Sans Black},
-SmallCapsFeatures={Letters=SmallCaps},
-BoldFont={Open Sans SemiBold}
+    %SmallCapsFont={Noto Sans},
+%   BoldSmallCapsFont= {Noto Sans Black},
+    %SmallCapsFeatures={Letters=SmallCaps},
+  %  Extension=.ttf,
+  %  Path=./fonts/Open_Sans/static/OpenSans/,
+    UprightFont={*-Light},
+    BoldFont={*-SemiBold}
 ]
-\newfontfamily\openlight{Open Sans Light}
-%\setmainfont{Alegreya Sans}
-\newfontfamily\overpass{Overpass Regular}[
-BoldFont={Overpass SemiBold}
+
+
+%\newfontfamily\openlight{[OpenSans-Light.ttf]}
+
+\newfontfamily\overpass{Overpass}[
+    Path={./OverpassFonts/},
+    Extension={.ttf},
+    BoldFont={* SemiBold},
+    UprightFont={* Regular},
 ]
-\newfontfamily\openreg{Open Sans Regular}
+
+%\newfontfamily\openreg{
+%    [OpenSans-Regular.ttf]
+%}
 %\RequirePackage[default]{cabin}
 %\RequirePackage[default]{opensans}
 %\renewcommand*\familydefault{\sfdefault}
 %
 
 %%%%%%% Fontsizes
-\newcommand\normline{12pt}
-\newcommand\normsize{9pt}
+%\newcommand\normline{12pt}
+%\newcommand\normsize{9pt}
 
 
 %lin in front of section
@@ -512,14 +524,14 @@ BoldFont={Overpass SemiBold}
 %   \if@issue
 %   \begin{tabularx}{\dimexpr \textwidth + \marginparwidth + \marginparsep\relax}{@{}l | l  >{\raggedleft\arraybackslash}X @{}}%
 %      \thepage &
-%                 \raisebox{-0.1em}{\includegraphics[height=1.5\smallwidth]{media/logos/blue-background-hollow.pdf}}
+%                 \raisebox{-0.1em}{\includegraphics[height=1.5\smallwidth]{media/TE_logo_blue@2048px.png}}
 %     {\Large\textsc{\lowercase Empirical}}
 %     & \if@review {\normalsize Manuscript by\ \ }\fi \@runningauthor
 %   \end{tabularx}%
 % %
 %   \else
   \begin{tabularx}{\dimexpr\textwidth + \marginparwidth + \marginparsep}{@{} l  >{\raggedleft\arraybackslash}X r @{}}%
-    \raisebox{-0.1em}{\includegraphics[height=1.5\smallwidth]{media/logos/blue-background-hollow.pdf}} \text{}
+    \raisebox{-0.1em}{\includegraphics[height=1.5\smallwidth]{media/TE_logo_blue@2048px.png}} \text{}
     \Large Empirical
  & {\selectfont\small\@runningauthor &  \thepage}
   \end{tabularx}%
@@ -614,7 +626,7 @@ BoldFont={Overpass SemiBold}
   \hspace{70mm}
   \begin{tabularx}{\linewidth}{@{} p{20mm} >{\raggedright\arraybackslash}m{5em} >{\raggedleft\arraybackslash}X @{}}
     &
-  \color{black!70} % \includegraphics[height=5em]{media/logos/blue-background-hollow.pdf} &
+  \color{black!70} % \includegraphics[height=5em]{media/TE_logo_blue@2048px.png} &
   &
       {\color{jotedark!40}\bfseries
       {\large\overpass\MakeUppercase{Empirical}}
@@ -732,7 +744,7 @@ BoldFont={Overpass SemiBold}
 \setlength{\LogoWidth}{4\smallwidth}
 \vspace*{3\baselineskip}
 \newcommand{\aTitle}{Lorem Ipsum Title\\ Which is too long\\ Too long} % a three lines title
-\newcommand{\aLogo}{\includegraphics[width=\LogoWidth]{media/logos/blue-background-hollow.pdf}}
+\newcommand{\aLogo}{\includegraphics[width=\LogoWidth]{media/TE_logo_blue@2048px.png}}
 \newcommand{\aAuthors}{\overpass\@author}
 \newcommand{\aWord}{\textsc{Cool}}
 
@@ -770,7 +782,7 @@ BoldFont={Overpass SemiBold}
 %    \hspace{-36mm}
 %  \begin{NiceTabular}{@{} m{0.2\linewidth} m{1.5mm} m{\textwidth} @{}}
 %    \if@header\else
-%    \Block[r]{}{\includegraphics[width=15mm]{media/logos/blue-background-hollow.pdf}}
+%    \Block[r]{}{\includegraphics[width=15mm]{media/TE_logo_blue@2048px.png}}
 %    \f3
 %    & &    \Block[l]{}<\overpass\huge\bfseries>{\@jotetitle}
      %   \if@header
@@ -1131,7 +1143,7 @@ BoldFont={Overpass SemiBold}
 
 %Append all the necessecary things after the references (license, copyright, acknowledgements)
 \RequirePackage{wrapfig}
-\pretocmd{\printbibliography}{\fontsize{\normsize}{\normline}\selectfont}{}{}
+%\pretocmd{\printbibliography}{\fontsize{\normsize}{\normline}\selectfont}{}{}
 \apptocmd{\printbibliography}{%
     \ifdefempty{\@companionkey}{}{
     \ifdefempty{\@acknowledgments}{}{%
@@ -1192,7 +1204,7 @@ BoldFont={Overpass SemiBold}
 %\normalsize
 \pagestyle{fancy}
 \AtBeginDocument{%
-\fontsize{\normsize}{\normline}\selectfont
+%\fontsize{\normsize}{\normline}\selectfont
   \robustify{\ref}
   \robustify{\cite}
   \ifdef{\citep}{\robustify{\citep}}{}
