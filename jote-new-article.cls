@@ -152,7 +152,7 @@
 \ProcessOptions\relax
 
 
-\LoadClass[twocolumn,12]{article}
+\LoadClass[twocolumn,9]{article}
 
 \RequirePackage{scrextend}
 \RequirePackage{trace}
@@ -221,7 +221,7 @@
 \RequirePackage
  [paperwidth=210mm,paperheight=280mm,
   textwidth=130mm,
-%  lines=55,
+%  lines=50,
   textheight=230mm,
   headsep=2\smallwidth,headheight=20\p@,
   footskip=\smallwidth,columnsep=\smallwidth, includeheadfoot, inner= 4.8cm,
@@ -330,18 +330,19 @@
     %SmallCapsFeatures={Letters=SmallCaps},
   %  Extension=.ttf,
   %  Path=./fonts/Open_Sans/static/OpenSans/,
+    ItalicFont={*-LightItalic},
     UprightFont={*-Light},
     BoldFont={*-SemiBold}
 ]
 
 
-%\newfontfamily\openlight{[OpenSans-Light.ttf]}
+\newfontfamily\openlight{Open Sans Light}
 
 \newfontfamily\overpass{Overpass}[
  %   Path={./OverpassFonts/},
  %   Extension={.ttf},
-    BoldFont={* SemiBold},
-    UprightFont={* Regular},
+    BoldFont={*-SemiBold},
+    UprightFont={*-Regular},
 ]
 
 %\newfontfamily\openreg{
@@ -775,28 +776,6 @@
 }
 
 
-%\newcommand{\titlesss}{%
-%  \vspace*{3\baselineskip}
-%  \noindent\begin{minipage}{\linewidth}
-    %\raggedright
-%    \hspace{-36mm}
-%  \begin{NiceTabular}{@{} m{0.2\linewidth} m{1.5mm} m{\textwidth} @{}}
-%    \if@header\else
-%    \Block[r]{}{\includegraphics[width=15mm]{media/TE_logo_blue@2048px.png}}
-%    \f3
-%    & &    \Block[l]{}<\overpass\huge\bfseries>{\@jotetitle}
-     %   \if@header
-     %   \vspace{\baselineskip}
-     %   \else
-     %   \vspace{\bigspace}
-     %   \fi
-%    \\[40pt]
-    %\Block[r]{}{\textsc{\jote@articletype}}
-%    & &    \Block[l]{}{\@author}
-%  \end{NiceTabular}
-%\end{minipage}%
-%}
-
 %%% measure the size of the titlepage
 \newlength{\titleheight}
 \setlength{\titleheight}{30mm}
@@ -816,59 +795,13 @@
   \end{textblock*}
 }
 \renewcommand{\maketitle}{%
-  %\@cover@logo%
 \thispagestyle{firstpage}
 \titlestuff
 \@insert@metadata%
-%  \vspace{-2.5\baselineskip}
-%\vspace{\bigspace}%
-%  \noindent\begin{minipage}{0.9\linewidth}
-%    \raggedright
-%  {\vskip2\baselineskip
-%    \hspace{-38mm}\raisebox{-10mm}{\includegraphics[width=30mm]{media/jote-logo.jpg}}
-%    \hspace{7mm}{\overpass\huge\bfseries\@title\par}}
-%  \vspace{-2.5\baselineskip}
-%  \vspace{\bigspace}
-%  \hspace{-36mm}
-%  \begin{tabularx}{\textwidth}{@{} >{\arraybackslash\raggedleft}p{0.2\linewidth} p{1.5mm} l @{}}
-%  {\overpass\bfseries\large\MakeUppercase\jote@articletype} & &    \@author
-%  \end{tabularx}
-%\end{minipage}%
-%  \vspace{-2.5\baselineskip}
-%\vspace{\bigspace}%
 \normalfont\normalsize%
 }
 
 
-% Title
-%\renewcommand{\maketitle}{%
-%  \vspace*{\baselineskip}%
-%  \noindent\vspace*{-1.2\baselineskip}%
-%  \renewcommand{\tabcolsep}{0pt}%
-%  \begin{tabular}{ >{\raggedright\arraybackslash}p{0.2\linewidth} >{\raggedleft\arraybackslash}p{0.8\textwidth}}%
-%  \begin{tabular}{r}
-%      \raisebox{0\height}{\includegraphics[width = 0.15\textwidth]{\@jlogo}}
-%  \end{tabular}%
-%  &%
-%  \begin{tabular}{>{\raggedright\arraybackslash}p{0.8\textwidth}}
-%        {\fontsize{22\p@}{26\p@}\bfseries\if@review Peer Review \ifdefempty{\@prround}{}{Round \@prround\ }of \enquote{\@title}\else\@title\fi}%
-%        \ifdefempty{\@subtitle}{}{\vspace*{0.6\baselineskip}{\fontsize{12\p@}{16\p@}\itshape\@subtitle}}
-%  \end{tabular}
-%  \end{tabular}%
-%  \vskip24\p@%
-%  \noindent\begin{minipage}{0.8\textwidth}\@author\end{minipage}%
-  %\vskip12\p@%
-  %\vspace*{-1\baselineskip}%
-%  \thispagestyle{firstpage}
-%  \renewcommand{\tabcolsep}{6pt}
-
-  %\@insert@metadata
-
-  %inserts metadata on its own line if there's no abstract
-%  \ifdefempty{\@noabstract}{}{\jote@affilmetadata%
-%    \vspace{\baselineskip} \hrule \vspace{2\baselineskip}
-%}
-%}
 
 % Affiliation + other metadata
 \newcommand{\jote@affilmetadata}{%
@@ -905,7 +838,9 @@
     }}{}
   \textcopyright\space The Author(s) \@jyear\\
   {\color{lightblack!70}This article is licensed under a CC-BY 4.0 license, which allows you to copy, redistribute, transform and build upon the article and all its contents in any medium or format for any purpose, provided that appropriate credit is given.}
-  \vskip\smallwidth% \href{https://crossmark.crossref.org/dialog/?doi=\@paperdoi\&domain=pdf\&date_stamp=\@paperpublisheddate}{\includegraphics[width=9\normsize]{media/CROSSMARK_Color_horizontal.png}}%
+  \vskip\smallwidth%
+  \href{https://crossmark.crossref.org/dialog/?doi=\@paperdoi\&domain=pdf\&date_stamp=\@paperpublisheddate}{\includegraphics[width=9pt]{media/CROSSMARK_Color_horizontal.png}}%
+
   \fi%
 }
 
@@ -916,6 +851,7 @@
 \RequirePackage{changepage}
 \RequirePackage{environ}
 \RequirePackage{marginnote}
+
 \newlength{\jote@affilmetadataheight}
 \newlength{\jote@abstractheight}
 \newlength{\jote@newaffilwidth}
@@ -977,7 +913,6 @@
 % Headings
 %%%%%
 
-\RequirePackage{sectsty}
 
 
 %\sectionfont{\large}
@@ -985,33 +920,34 @@
 %\subsubsectionfont{\small}
 \RequirePackage[explicit]{titlesec}
 
-  \titleformat{name=\section}[block]
-    {}
-    {}{0pt}{\fontsize{11pt}{\normline}\bfseries\raggedright#1}
+\titleformat{\section}[block]{}{}{0pt}{\Large}
+\titleformat{name=\section}[block]
+     {}
+ {}{0pt}{\fontsize{11pt}{12pt}\bfseries\raggedright#1}
 
-\titlespacing*{\section}{0pt}{\dimexpr\baselineskip}{\dimexpr\baselineskip-0pt}
-\titlespacing*{name=\section,numberless}{0pt}{\baselineskip}{0pt}
+ \titlespacing*{\section}{0pt}{\dimexpr\baselineskip}{\dimexpr\baselineskip-0pt}
+ \titlespacing*{name=\section,numberless}{0pt}{\baselineskip}{0pt}
 
-\titleformat{\subsection}[block]
-  {\raggedright}
-  {}{0pt}{\fontsize{10pt}{\dimexpr\normline-2pt}\openreg#1}
+ \titleformat{\subsection}[block]
+   {\raggedright}
+   {}{0pt}{\fontsize{10pt}{10pt}\openreg#1}
 
-\titlespacing*{\subsection}{0pt}{\dimexpr\baselineskip -2pt}{2pt}
+ \titlespacing*{\subsection}{0pt}{\dimexpr\baselineskip -2pt}{2pt}
 
-\titleformat{\subsubsection}[block]
-  {\raggedright}
-  {}{0pt}{\fontsize{10pt}{\normline}\selectfont\itshape #1}%Textls sets spacing. 100 is a bit, can take big numbers
-\titlespacing*{\subsubsection}{0pt}{\dimexpr\baselineskip - 2pt}{0pt}
+ \titleformat{\subsubsection}[block]
+   {\raggedright}
+   {}{0pt}{\fontsize{10pt}{12pt}\selectfont\itshape #1}%Textls sets spacing. 100 is a bit, can take big numbers
+ \titlespacing*{\subsubsection}{0pt}{\dimexpr\baselineskip - 2pt}{0pt}
 
-    \titleformat{name=\paragraph}[runin]
-      {\bfseries}
-      {}{0pt}{#1\ \ }
-    \titleformat{\subparagraph}[runin]
-      {}
-      {}{0pt}{\textit{#1}\ \ \ }
+%     \titleformat{name=\paragraph}[runin]
+%       {\bfseries}
+%       {}{0pt}{#1\ \ }
+%     \titleformat{\subparagraph}[runin]
+%       {}
+%       {}{0pt}{\textit{#1}\ \ \ }
 
-\titlespacing*{\paragraph}{\parindent}{0\baselineskip}{0pt}
-\titlespacing*{\subparagraph}{\parindent}{0\baselineskip}{0pt}
+% \titlespacing*{\paragraph}{\parindent}{0\baselineskip}{0pt}
+% \titlespacing*{\subparagraph}{\parindent}{0\baselineskip}{0pt}
 
 
 
@@ -1070,7 +1006,9 @@
       \vrule height0.75em width0.5em depth0.25em\fi}
 
 % Captions
-\RequirePackage[tableposition=top, singlelinecheck=false, labelfont=bf, labelsep=quad]{caption}
+    \RequirePackage{caption}
+    \captionsetup[table]{tableposition=top, singlelinecheck=false, labelfont=bf, labelsep=quad,textfont=it ,font=small}
+    \captionsetup[figure]{tableposition=top, singlelinecheck=false, labelfont=bf, labelsep=quad,textfont=it ,font=small}
 %\captionsetup*[table]{skip=0.5ex}
 
 % Tables
@@ -1104,13 +1042,13 @@
 
 % References
 \if@numeric
-  \RequirePackage[backend=biber, citestyle=numeric-comp, sorting=none, bibstyle=apa]{biblatex}
+  \RequirePackage[backend=biber, citestyle=numeric-comp, sorting=none, bibstyle=apa, backref=page]{biblatex}
   \AtEndPreamble{\makeatletter
     \input{numeric.bbx}
   \makeatother}
 \fi
 \if@authordate
-    \RequirePackage[backend=biber, style=apa]{biblatex}
+    \RequirePackage[backend=biber, style=apa,backref=page]{biblatex}
 \fi
 \if@amsrefs
   \RequirePackage{amsrefs}
@@ -1167,7 +1105,7 @@
         \end{wrapfigure}
         {\bfseries\color{lightblack}\textsf{Open Access.}} This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit \href{https://creativecommons.org/licenses/by/4.0/}{https://creativecommons.org/licenses/by/4.0/}.
         \newline\newline
-        \textcopyright \text{ }The Author(s) 2021%
+        \textcopyright \text{ }\@runningauthor 2021%
   }{}{}
 
 \RequirePackage{ftnright} %Puts footnotes in the righthand corner always

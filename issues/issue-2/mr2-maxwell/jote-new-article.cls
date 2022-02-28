@@ -1,0 +1,1 @@
+../../../jote-new-article.cls
