@@ -178,6 +178,7 @@
 \RequirePackage{tikz,lipsum,lmodern}
 \RequirePackage[breakable,skins,most]{tcolorbox}
 \RequirePackage{float}%to define custom environments that float
+
 \RequirePackage{placeins}
 
 % \RequirePackage{flushend} % Balances two columns at the end of the page
@@ -194,10 +195,15 @@
 \definecolor{jotedarkold}{HTML}{12799d}
 \definecolor{jotelightold}{HTML}{d6f6ff}
 
+
+
 \definecolor{joteorange}{HTML}{FEAF0C}
 \definecolor{jotedark}{HTML}{002642}
 
 \colorlet{lightblack}{jotedark!70}
+
+\RequirPackage{monotype}
+
 %\if@twocolumn
 %\else
 %  \RequirePackage[right]{lineno}
@@ -316,9 +322,9 @@
 %SmallCapsFont = {Alegreya Sans},
 %SmallCapsFeatures={Letters=SmallCaps}
 %]{Open Sans Regular}
-\setmainfont{Andada Regular}[
+\setmainfont{Open Sans Light}[
 %Scale={0.85},
-SmallCapsFont={Alegreya Sans},
+SmallCapsFont={Noto Sans},
 %BoldSmallCapsFont= {Noto Sans Black},
 SmallCapsFeatures={Letters=SmallCaps},
 BoldFont={Open Sans SemiBold}
