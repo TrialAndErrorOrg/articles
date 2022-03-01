@@ -331,7 +331,7 @@
   %  Extension=.ttf,
   %  Path=./fonts/Open_Sans/static/OpenSans/,
     UprightFont={*-Light},
-    BoldFont={*-SemiBold}
+    BoldFont={*-Bold}
 ]
 
 
