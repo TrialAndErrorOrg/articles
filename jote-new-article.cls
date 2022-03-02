@@ -202,9 +202,10 @@
 
 \definecolor{joteorange}{HTML}{FEAF0C}
 \definecolor{jotedark}{HTML}{002642}
-
+\definecolor{joteOrangeLight}{HTML}{fbeacd}
 \colorlet{lightblack}{jotedark!70}
 \colorlet{betterlightblack}{lightblack!65!gray!65}
+\colorlet{darklightblack}{lightblack!65!gray!85}
 
 %\if@twocolumn
 %\else
@@ -225,7 +226,9 @@
 %  lines=50,
   textheight=230mm,
   headsep=2\smallwidth,headheight=20\p@,
-  footskip=\smallwidth,columnsep=\smallwidth, includeheadfoot, inner= 4.8cm,
+  footskip=\smallwidth,
+  columnsep=\smallwidth,
+  includeheadfoot, inner= 4.8cm,
   outer=15mm, bindingoffset=0mm, marginparwidth=2.5cm, marginparsep=2\smallwidth
   %margin=5cm,
   ]
@@ -314,40 +317,36 @@
 % spacing command
 \newcommand{\bigspace}{3\baselineskip}
 
-
+\RequirePackage{amssymb}
+\newcommand{\jotepre}{{\huge$\blacksquare\kern-.2em\blacksquare$}}
 
 %%%%%%%%%%%%%%%%%%
 %% Fonts
 %%%%%%%%%%%%%%%%%%
-%\setmainfont{Overpass Regular}
-%\setmainfont[
-%SmallCapsFont = {Alegreya Sans},
-%SmallCapsFeatures={Letters=SmallCaps}
-%]{Open Sans Regular}
-%\setmainfont{Open Sans}[
-%Scale={0.85},
-    %SmallCapsFont={Noto Sans},
-%   BoldSmallCapsFont= {Noto Sans Black},
-    %SmallCapsFeatures={Letters=SmallCaps},
-  %  Extension=.ttf,
-  %  Path=./fonts/Open_Sans/static/OpenSans/,
-%    ItalicFont={*-LightItalic},
-%    UprightFont={*-Light},
-%    BoldFont={*-SemiBold}
-%]
 
-\setmainfont{Open Sans Light}[
-    BoldFont={Open Sans SemiBold},
+
+\setmainfont{OpenSans}[
+    Extension={.ttf},
+    Path={../../../fonts/OpenSans/},
+    UprightFont={*-Light},
+    ItalicFont={*-LightItalic},
+    BoldFont={*-SemiBold},
 ]
-\newfontfamily\openlight{Open Sans Light}
-\newfontfamily\openreg{Open Sans}
+
+\newfontfamily\openreg{OpenSans}[
+    Extension={.ttf},
+    Path={../../../fonts/OpenSans/},
+    UprightFont={*-Regular},
+    ItalicFont={*-Italic},
+    BoldFont={*-Bold},
+]
 
 
 \newfontfamily\overpass{Overpass}[
-  Path = ../../../,
+  Path = {../../../},
     Extension = .ttf,
    UprightFont = *-Regular,
-   BoldFont = *-SemiBold
+   BoldFont = *-SemiBold,
 ]
 
 \newfontfamily\overpasslight{Overpass}[
@@ -399,7 +398,7 @@
 }
 
 
-
+\RequirePackage{fontawesome5}
 \RequirePackage{academicons}
 \newcommand{\orcid}[1]{ \href{orcid.org/#1}{\textcolor{orcidlogocol}{\kern -0.2em \aiOrcid \kern -0.2em}} }
 % Accompanying article box
@@ -411,7 +410,7 @@
 \newtcolorbox{companionbox}{%
 enhanced, 
 sharp corners, 
-colback=joteorange!25, 
+colback=joteOrangeLight, 
 frame hidden, 
 top= \smallwidth, 
 bottom=.8\smallwidth, 
@@ -429,18 +428,20 @@ lower separated=false]%
 
 \newtcolorbox{joteBox}[1]{
     enhanced, 
-    top=\dimexpr.8\smallwidth,
-    bottom=\dimexpr\smallwidth, 
-    left=6mm, 
-    right=12mm, 
-    colframe=joteorange!20,
-    colbacktitle=joteorange!20,
-    colback=joteorange!20, 
+%    top=\dimexpr.5\smallwidth,
+    bottom=\dimexpr 1.6\smallwidth, 
+    left=1.7\smallwidth, 
+    right=1.7\smallwidth, 
+    colframe=joteOrangeLight,
+    colbacktitle=joteOrangeLight,
+    colback=joteOrangeLight, 
     coltitle=jotedark,
-    fonttitle={\overpass \bfseries \Large},
+    fontupper={\openreg \color{jotedark}},
+    fonttitle={\overpass \bfseries \LARGE \color{jotedark}},
     sharp corners,
     % look if you have a better idea by all means
-    title={\vskip-1.2em #1}
+    % no raisebox doesnt work
+    title={\vskip-.8em #1 \vspace*{.2em}}
 }
 
 \RequirePackage{tikz}
@@ -450,7 +451,7 @@ lower separated=false]%
 box/.style={rectangle, fill=joteorange!20, 
 text width={\dimexpr .5\textwidth + \myoddoffset \relax},
 align=left,
-minimum height=2em}
+minimum height=2em},
 ]
 %Nodes
 \node[box]  (container)       {\BODY};
@@ -463,17 +464,18 @@ minimum height=2em}
 
 \begin{takeHomeFloat}
         \phantomsection
-        \addcontentsline{toc}{section}{Take Home Message}
+        \addcontentsline{toc}{section}{Take-home Message}
     \begin{adjustwidth}{\dimexpr-\fullwidthlen\relax}{-2\smallwidth}
    \begin{minipage}{\dimexpr .5\textwidth + \myoddoffset -\smallwidth\relax}
-   \renewcommand{\baselinestretch}{1.3}
-    \begin{joteBox}[Take-home Message]
-        \small
+   \renewcommand{\baselinestretch}{1.5}
+    \begin{joteBox}{Take-home Message}
+   % \RaggedRight
+       \small
         \BODY
       \end{joteBox}
     \end{minipage}
   \end{adjustwidth} 
-  \vskip-.3em
+ % \vskip-.3em
   \end{takeHomeFloat}
 }
 
@@ -487,16 +489,17 @@ minimum height=2em}
    \begin{minipage}{\dimexpr .5\textwidth + \myoddoffset -\smallwidth\relax}
    \renewcommand{\baselinestretch}{1.3}
    
-    \begin{joteBox}[Original Purpose]
+    \begin{joteBox}{Original Purpose}
+    \RaggedRight
         \small
         \BODY
-      \end{takehomebox}
-%\vskip-\dimexpr\takehomeheight+.9\smallwidth
-%\text{\ \ \ \ \ \ \ \ }{\overpass \bfseries \Large Take-home Message \the\takehomeheight}
+\end{joteBox}
     \end{minipage}
   \end{adjustwidth} 
   \end{originalPurposeFloat}
 }
+
+
 \newfloat{company}{b!}{lop}
 
 \NewEnviron{companion}[1]{
@@ -606,7 +609,10 @@ minimum height=2em}
 
 % Formatting of footer for first page
 %% v1.4: can't use "real" footnotes anymore for twocolumn
-\RequirePackage[flushmargin,bottom,norule, marginal]{footmisc}
+\RequirePackage[flushmargin,bottom,flushbottom,norule, marginal]{footmisc}
+\RequirePackage{afterpage}
+
+
 
 
 \def\@fpfootnotes{}
@@ -635,10 +641,10 @@ minimum height=2em}
 %   \end{tabularx}%
 % %
 %   \else
-  \begin{tabularx}{\dimexpr\textwidth + \marginparwidth + \marginparsep}{@{} l  >{\raggedleft\arraybackslash}X r @{}}%
-    \raisebox{-0.1em}{\includegraphics[height=1.5\smallwidth]{media/TE_logo_blue@2048px.png}} \text{}
-    \Large \jote@articletype
- & {\selectfont\textit{\@runningauthor} &  \thepage}
+  \begin{tabularx}{\dimexpr\textwidth + \marginparwidth + \marginparsep}{@{} l  >{\raggedleft\arraybackslash}X  r @{}}%
+    \raisebox{-0.1em}{\includegraphics[height=1.5\smallwidth]{media/TE_logo_blue@2048px.png}} \,
+    \Large \color{jotedark} \overpass \jote@articletype
+ & {\textls[10]{\color{jotedark}\@runningauthor} &  \thepage}
   \end{tabularx}%
   % \fi
 }
@@ -669,26 +675,26 @@ minimum height=2em}
   \begin{tabularx}{\dimexpr \textwidth + \myoddoffset }{@{}X  r @{}}%
   \hline
   & \\
-  \openlight
-  \@jname, \if@issue \textit{\@jvolume}(\@jissue),~ \@jpages\else\@jyear\fi &
+  \overpasslight
+  \@jname, \if@issue \textbf{\@jvolume}(\@jissue),~ \@jpages\else\@jyear\fi &
   View interactive version \href{https://doi.org/ \@paperdoi \if@review .pr\@prround\fi}{here}.
   \end{tabularx}%
 }
 
-\fancyfoot[LE]{%
-  \fontsize{7\p@}{13\p@}\sffamily\openlight%
-  \begin{tabularx}{\textwidth}{@{}X  r @{}}%
-  \hline
-  
-  \end{tabularx}%
-}
+%\fancyfoot[LE]{%
+%  \openlight%
+%  \begin{tabularx}{\textwidth}{@{}X  r @{}}%
+%  \hline
+%  
+%  \end{tabularx}%
+%}
 
 
 %TODO Make this a table so that alignment is super easy
 \newcommand{\receiveddatahori}{%
-  \ifdefempty{\@paperreceived}{}{{\bfseries\color{betterlightblack}Received \hspace*{1mm}}\@paperreceived\\}
-  \ifdefempty{\@paperreceived}{}{{\bfseries\color{betterlightblack}Accepted \hspace*{.5mm}}\@paperaccepted\\}
-  \ifdefempty{\@paperreceived}{}{{\bfseries\color{betterlightblack}Published }\@paperpublished\\}
+  \ifdefempty{\@paperreceived}{}{{\openreg\color{jotedark}Received \hspace*{1mm}}\@paperreceived\\}
+  \ifdefempty{\@paperreceived}{}{{\openreg\color{jotedark}Accepted \hspace*{.5mm}}\@paperaccepted\\}
+  \ifdefempty{\@paperreceived}{}{{\openreg\color{jotedark}Published }\@paperpublished\\}
 }
 \newcommand{\receiveddata}{%
   % All this mess is to assure that any combination of \@paperpublished, \@paperreceived and \@paperaccepted will work. It only assumes that \@paperpublished is there, the other two can be there in any combination. Just trust me, it's not worth going through
@@ -727,16 +733,13 @@ minimum height=2em}
 \fancyhead[L]{%
   \if@header
   \hspace{70mm}
-  \begin{tabularx}{\linewidth}{@{} p{20mm} >{\raggedright\arraybackslash}m{5em} >{\raggedleft\arraybackslash}X @{}}
-    &
-  \color{black!70} % \includegraphics[height=5em]{media/TE_logo_blue@2048px.png} &
-  &
-      {\color{joteorange}\bfseries
-      \textls[100]{\large\overpass\MakeUppercase{\jote@articletype}}
-    \text{   } {\color{joteorange}\huge\raisebox{-.25em}{\aiOpenAccess}}
-   % \raisebox{-.5\smallwidth}{
-   % \includegraphics[height=1.5\smallwidth]{media/CROSSMARK_Color_square_no_text.png}}
-    }
+  \begin{tabularx}{\linewidth}{@{} l @{}}
+      {\color{joteorange!70}\bfseries
+      \textls[60]{%
+        \Huge\overpass\MakeUppercase{\jote@articletype}}
+         \text{   } {\color{joteorange!70}\huge\raisebox{-.1em}{\aiOpenAccess}
+                  }
+     }
   \end{tabularx}
   \fi
   }
@@ -746,13 +749,14 @@ minimum height=2em}
     \fancyheadoffset[loh,reh,lof]{\myoddoffset}
   \setlength{\arrayrulewidth}{.5\p@}%
   \arrayrulecolor{betterlightblack}%
+  \overpasslight
  % \fontsize{8pt}{13\p@}
  \small
-  \selectfont\color{betterlightblack}%
+  \color{betterlightblack}%
   \if@issue
-    \begin{tabularx}{\linewidth}{@{}p{\dimexpr \marginparwidth + 6mm \relax} l >{\raggedleft\arraybackslash}X | r}%
+    \begin{tabularx}{\linewidth}{@{} p{\dimexpr \marginparwidth  + 3mm \relax} l >{\raggedleft\arraybackslash}X | r}%
       &
-     \@jname  \@jyear, {\bfseries\color{betterlightblack}\@jvolume} (\@jissue) \@jyear
+     \@jname, \textbf{\color{betterlightblack}\@jvolume} (\@jissue) \@jyear
       & \href{https://doi.org/\@paperdoi}{https://doi.org/\@paperdoi}
       & \thepage
     \end{tabularx}%
@@ -856,8 +860,10 @@ minimum height=2em}
   \setlength{\MetaWidth}{%
   \dimexpr\paperwidth-\textwidth-1.8\marginparsep-\smallwidth%
   }
-  \setlength{\MetaHeight}{\dimexpr\textheight-\CoffinTotalHeight\MainFrame-5\smallwidth}
-  \begin{textblock*}{\MetaWidth}[0,1](-\MetaWidth,\dimexpr\MetaHeight+\Gm@bmargin -2\smallwidth \relax) %\\dimexpr\textheight-\Gm@bmargin-4\smallwidth-1pt\relax)
+  
+  \setlength{\MetaHeight}{\dimexpr\textheight-\CoffinTotalHeight\MainFrame-5.5\smallwidth}
+  
+  \begin{textblock*}{\MetaWidth}[0,1](-\MetaWidth,\dimexpr\MetaHeight+\Gm@bmargin -2.2\smallwidth \relax) %\\dimexpr\textheight-\Gm@bmargin-4\smallwidth-1pt\relax)
     \begin{tcolorbox}[%
     enhanced, sharp corners, colback=white, frame hidden,%
     borderline east={0.5pt}{-0em}{joteorange},%
@@ -879,6 +885,7 @@ minimum height=2em}
 
 
 
+
 % Affiliation + other metadata
 \newcommand{\jote@affilmetadata}{%
   \raggedright
@@ -888,15 +895,15 @@ minimum height=2em}
   \vspace*{\smallwidth}
   \if@review
   This is \ifdefempty{\@prround}{the originally submitted version}{submission \#\@prround} of \ifdefempty{\@noabstract}{}{\vskip0pt}\enquote{\@title}\ifdefempty{\@noabstract}{}{\vskip0pt} with \ifdefempty{\@prround}{}{round \@prround of the} peer review comments attached.
-  {\bfseries\color{betterlightblack}Original author(s):} \vskip1pt \textit{\@ogauthor} .
-  {\bfseries\color{betterlightblack}Published version}\vskip1pt \href{https://doi.org/\@paperdoi}{https://doi.org/\@paperdoi}.
-  {\bfseries\color{betterlightblack}How to read:} \vskip1pt Sections which have peer review comments are marked by $\bigblacktriangledown$ or \hyperref[sec:reviews]{links},\ifdefempty{\@noabstract}{}{\vskip0pt} clicking which directs you to said comments.\ifdefempty{\@noabstract}{}{\vskip0pt} The reviews contain links referring back to the original section.
+  {\openreg\color{betterlightblack}Original author(s):} \vskip1pt \textit{\@ogauthor} .
+  {\openreg\color{betterlightblack}Published version}\vskip1pt \href{https://doi.org/\@paperdoi}{https://doi.org/\@paperdoi}.
+  {\openreg\color{betterlightblack}How to read:} \vskip1pt Sections which have peer review comments are marked by $\bigblacktriangledown$ or \hyperref[sec:reviews]{links},\ifdefempty{\@noabstract}{}{\vskip0pt} clicking which directs you to said comments.\ifdefempty{\@noabstract}{}{\vskip0pt} The reviews contain links referring back to the original section.
   \else
   \ifdefempty{\@contributions}{}{\authfn{2}\@contributions}
   \vskip0pt
   \receiveddatahori
   \vskip\smallwidth
-  {\bfseries\color{betterlightblack}Correspondence}\\
+  {\openreg\color{jotedark}Correspondence}\\
   \@corraddress\\
   \@corremail
   \vskip\smallwidth
@@ -908,9 +915,11 @@ minimum height=2em}
     {\bfseries\color{betterlightblack}Funding: }%
     \@funding\vskip\smallwidth
 }%
+{\openreg License}\ \  \faIcon{creative-commons}\  \faIcon{creative-commons-by}\\
+  {\color{darklightblack}This article is licensed under the {\openreg\href{https://www.creativecommons.org/licenses/by-nc-nd/4.0/legalcode}{Creative Commons Attirbution 4.0 (CC-BY 4.0)}} license, which allows you to copy, redistribute, transform and build upon the article and all its contents in any medium or format for any purpose, provided that appropriate credit is given.}
+  
+    \textcopyright\space \@runningauthor\ \@jyear\\
 
-  \textcopyright\space {\openreg \@runningauthor}\ \@jyear\\
-  {\color{betterlightblack}This article is licensed under a CC-BY 4.0 license, which allows you to copy, redistribute, transform and build upon the article and all its contents in any medium or format for any purpose, provided that appropriate credit is given.}
   \vskip\smallwidth%
   \href{https://crossmark.crossref.org/dialog/?doi=\@paperdoi\&domain=pdf\&date_stamp=\@paperpublisheddate}{\includegraphics[height=2em]{media/CROSSMARK_Color_horizontal.png}}%
 
@@ -934,7 +943,7 @@ minimum height=2em}
   \openlight
   \newcommand{\keywords}[1]{%
     \vskip\smallwidth
-    \noindent{{\bfseries\color{betterlightblack}\textsc{Keywords}}\ }
+    \noindent{{\color{darklightblack}\textbf{Keywords}}\ }
     \noindent{ \textit{##1}\par}
   }%
   \if@noabstract\else
@@ -1081,7 +1090,7 @@ minimum height=2em}
 % Captions
     \RequirePackage{caption}
     \captionsetup[table]{tableposition=top, singlelinecheck=false, labelfont=bf, labelsep=quad, size=small}
-    \captionsetup[figure]{tableposition=top, singlelinecheck=false, labelfont=bf, labelsep=quad ,size=small, textfont={color={betterlightblack}, small}, justification=RaggedRight}
+    \captionsetup[figure]{tableposition=top, singlelinecheck=false, labelfont=bf, labelsep=quad ,size=small, textfont={color={darkerlightblack}, small}, justification=RaggedRight}
 %\captionsetup*[table]{skip=0.5ex}
 
 % Tables
@@ -1202,7 +1211,7 @@ minimum height=2em}
  %       \textcopyright \text{ }\@runningauthor\ 2022%
   }{}{}
 
-\RequirePackage{ftnright} %Puts footnotes in the righthand corner always
+%\RequirePackage{ftnright} %Puts footnotes in the righthand corner always
 
 %\AtEndPreamble{
 %\makeatletter
