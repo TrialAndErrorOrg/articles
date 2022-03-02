@@ -609,7 +609,7 @@ minimum height=2em},
 
 % Formatting of footer for first page
 %% v1.4: can't use "real" footnotes anymore for twocolumn
-\RequirePackage[flushmargin,bottom,flushbottom,norule, marginal]{footmisc}
+\RequirePackage[flushmargin,bottom,norule, marginal]{footmisc}
 \RequirePackage{afterpage}
 
 
@@ -796,7 +796,7 @@ minimum height=2em},
 \RequirePackage{textpos}
 
 \newcommand{\more@metadata}{%
-  \openlight
+  
   \jote@affilmetadata
 }
 
@@ -889,7 +889,6 @@ minimum height=2em},
 % Affiliation + other metadata
 \newcommand{\jote@affilmetadata}{%
   \raggedright
-  \openlight
   \scriptsize%
   \AB@affillist\\
   \vspace*{\smallwidth}
@@ -940,7 +939,6 @@ minimum height=2em},
 \newlength{\jote@newabstractwidth}
 \newlength{\jote@newheight}
 \NewEnviron{jote@abstract}{%
-  \openlight
   \newcommand{\keywords}[1]{%
     \vskip\smallwidth
     \noindent{{\color{darklightblack}\textbf{Keywords}}\ }
@@ -1090,7 +1088,7 @@ minimum height=2em},
 % Captions
     \RequirePackage{caption}
     \captionsetup[table]{tableposition=top, singlelinecheck=false, labelfont=bf, labelsep=quad, size=small}
-    \captionsetup[figure]{tableposition=top, singlelinecheck=false, labelfont=bf, labelsep=quad ,size=small, textfont={color={darkerlightblack}, small}, justification=RaggedRight}
+    \captionsetup[figure]{tableposition=top, singlelinecheck=false, labelfont=bf, labelsep=quad ,size=small, textfont={color={darklightblack}, small}, justification=RaggedRight}
 %\captionsetup*[table]{skip=0.5ex}
 
 % Tables
