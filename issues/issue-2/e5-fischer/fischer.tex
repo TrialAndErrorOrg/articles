@@ -17,7 +17,7 @@
 % authordate = APA
   % number =[1]
   %
-    \documentclass[twocolumn, serif, empirical, authordate]{jote-article}
+    \documentclass[twocolumn, issue, empirical, authordate]{jote-new-article}
 
 
   %%% Add the bibliography, make sure it's in the same directory
@@ -27,16 +27,12 @@
 
   % This package is for generating Lorem Ipsum, usage: \lipsum[X] where X is the Xth paragraph of lorem ipsum.OR use[1 - 5] to generate the first five, etc.
 
-\usepackage{gensymb}
-\usepackage{graphicx}
-\usepackage[export]{adjustbox}% http://ctan.org/pkg/adjustbox
-
 
 %%% TODO: Make this a 1 - 5 option scale to reduce the chance of mistyping
 
   % Enter the title, in Title Case Please
     % Try to keep it under 3 lines
-\title{Real-effort survey designs: Open-ended questions to overcome the challenge of measuring behavior in surveys}
+\jotetitle{Real-effort survey designs: Open-ended questions to overcome the challenge of measuring behavior in surveys}
 
 % List abbreviations here, if any.Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
 %\abbrevs{
@@ -83,13 +79,14 @@ dam, Germany}
   \runningauthor{Fischer}
 
 % The name of the Journal
-  \jname{Journal of Trial and Error}
+  \jname{Journal of Trial \& Error}
 
 % The year that the article is published
   \jyear{2021}
 
 % The Volume Number
-    %\jvolume{Fall}
+    \jvolume{2}
+    \jissue{1}
 
 % The website that's listed in the bottom right
   \jwebsite{
@@ -112,13 +109,10 @@ dam, Germany}
 % The pages of the article, comment out if rolling article
       %\jpages{1 - 12}
 % Link to the logo, might be redundant
-    \jlogo{media/jote_logo_full.png}
 
 % Fill something here if this is a rolling / online first article, will make ROLLING ARTICLE show up on the first page
-    \rolling{}
 
 % Sets the paragraph skip to be zero, this should be in the CLS
-    \setlength{\parskip} {0pt}
 
 %%% Companion Piece
 
@@ -128,10 +122,7 @@ dam, Germany}
 
         % These two set the height and width of the abstract.There's no solution to do this automatically at the moment so fiddle with these a bit. height-width should be 5mm, and ranges between 50-100 are realistic
           % Higher number means skinnier abstract
-    \heightabstract{45mm}
-    \widthaffil{40mm}
-% Enter something here in order for the abstract to disappear.Be sure to also delete the abstract
-    \noabstract{}
+
 % Fill in the keywords that will appear in the abstract, max 7
     \keywordsabstract{survey design, survey experiment, real-effort design, human behavior, order effect 
 }
@@ -153,25 +144,9 @@ dam, Germany}
 
 
 
-\addcontentsline{toc}{section}{Take-home message}
-\section*{Take-home message}
-
-It is not possible to measure actual behavior in surveys and stated behavior is not always valid. Real-effort designs use real tasks in experiments to imitate real-world behavior and measure behavior more validly. This study combines both approaches, surveys and real-effort designs, and uses open-ended questions to measure effort in answering behavior as a proxy for actual instead of stated behavior. However, an order effect appears when this strategy is used to measure behavior in within-subject designs and, therefore, results are misleading.
 
 
-
-
-
-\addcontentsline{toc}{section}{Purpose}
-\section*{Purpose}
-
-This study aimed at testing a more valid way to study human behavior in surveys. I tried to overcome the limited validity of self-reported behavior in surveys. I wanted to adapt experimental real-effort tasks to a survey design by using open-ended questions and analyzing the effort participants put into answering them.
-
-
-\addcontentsline{toc}{section}{Real-Effort Survey Designs: Open-Ended Questions to Overcome the Challenge of Measuring Behavior in Surveys}
-\section*{Real-effort survey designs: Open-ended questions to overcome the challenge of measuring behavior in surveys}
-
-Measuring human behavior is an ongoing challenge for social scientists (\nptextcite[]{Schwarz2001}). In ideal circumstances, human behavior should be observed either in the field or in the lab. However, field trips and lab experiments are often both time- and resource-consuming.
+\lettrine{M}easuring human behavior is an ongoing challenge for social scientists (\nptextcite[]{Schwarz2001}). In ideal circumstances, human behavior should be observed either in the field or in the lab. However, field trips and lab experiments are often both time- and resource-consuming.
 Observing behavior can also be prohibited in some cases, for instance if the behavior occurs too infrequently to be observed in a timely manner, or is not possible for others to observe (\nptextcite[p. 128]{Schwarz2001}). Additionally, in the field of public administration and other fields using sensitive target groups, it is often difficult to recruit participants for a lab experiment or to even be allowed to observe them in the field. If lab experiments are conducted, they usually rely on students as participants. However, student samples are not externally valid, especially when a special population is being studied, such as public employees.
 
 Therefore, self-reported behavior in surveys and survey experiments is an often-used alternative (\nptextcite[p. 120]{James2017}). Surveys are "quick and cheap" (\nptextcite[p. 1398]{Friborg2013}) and can easily reach an intended population. However, these approaches to data collection come with other disadvantages, such as not measuring real behavior. One solution could be to integrate open-ended questions as a measure of answering effort, and thus a proxy for real behavior, into quantitative surveys. This kind of method and data triangulation could help to overcome limitations of surveys related to the measurement of behavior.
@@ -185,8 +160,18 @@ This paper is organized as follows. Firstly, the state of research on the use of
 Problems with the approach used to measure behavior with open-ended questions are highlighted. Subsequently, these issues are discussed, and recommendations are made for future research.
 
 
-\addcontentsline{toc}{section}{Open-Ended Questions in Quantitative Surveys as a Measure of Effort}
-\section*{Open-ended questions in quantitative surveys as a measure of effort}
+
+
+
+\begin{takeHomMessage}
+
+It is not possible to measure actual behavior in surveys and stated behavior is not always valid. Real-effort designs use real tasks in experiments to imitate real-world behavior and measure behavior more validly. This study combines both approaches, surveys and real-effort designs, and uses open-ended questions to measure effort in answering behavior as a proxy for actual instead of stated behavior. However, an order effect appears when this strategy is used to measure behavior in within-subject designs and, therefore, results are misleading.
+
+\end{takeHomMessage}
+
+
+
+\section{Open-ended questions in quantitative surveys as a measure of effort}
 
 Combining open-ended and closed-ended questions in a survey requires a pragmatic approach of method and data triangulation (\nptextcite[p. 631]{Rossman1985}). Quantitative and qualitative methods not only succeed one another, but are integrated within a single study. Due to this triangulation, "researchers are allowed to improve the accuracy of conclusions by relying on data from more than one method" (\nptextcite[p. 632]{Rossman1985}). Hence, the combination of qualitative and quantitative data is used here to offset weaknesses of the latter, draw on the strengths of the former, and enhance the validity of the findings (\nptextcite[p. 105]{Bryman2006,Dewasiri2018}).
 
@@ -208,8 +193,8 @@ Unfitting answers may indicate that some participants are unable to understand t
 Furthermore, within-subjects designs might be useful to overcome these between-subjects differences.
 
 
-\addcontentsline{toc}{section}{Putting a Real-Effort Survey Design into Practice: The Effect of Rewards on Knowledge-Sharing Behavior}
-\section*{Putting a real-effort survey design into practice: The effect of rewards on knowledge-sharing behavior}
+
+\section{Putting a real-effort survey design into practice: The effect of rewards on knowledge-sharing behavior}
 
 A survey experiment on knowledge-sharing behavior was conducted to analyze whether tangible or intangible incentives can foster that behavior. Knowledge sharing is the exchange of knowledge among individuals, teams, units, or organizations (\nptextcite[]{Paulin2012}).
 It is the basis of and a subprocess in an organization's knowledge management. In this article, the term "knowledge sharing" describes the behavior of donating knowledge from one person to another or to a medium. Multiple determinants influence knowledge sharing. Among others, tangible and intangible rewards are considered to foster knowledge-sharing behavior. Tangible rewards are material incentives, such as financial bonuses, and usually enhance extrinsic motivation. In contrast, intangible rewards, such as praise from a colleague or supervisor, usually influences intrinsic motivation. On the one hand, it has been shown that monitoring (e.g., controlling with performance measures) and rewards increase the knowledge-sharing activity of employees in an organization (\nptextcite[]{Wang2011,Witherspoon2013}). On the other hand, \textcite{Bock2002}'s results suggest that expected rewards do not affect knowledge sharing.
@@ -224,25 +209,7 @@ The \emph{intangible reward} treatment was operationalized by offering explicit 
 
 \emph{Knowledge-sharing behavior} (KSB) was measured with an open-ended question as a proxy for real behavior. The item reads: "If you decided to share your knowledge, please briefly describe how exactly you will share your knowledge." Thus, participants were not asked to actually share their knowledge, but it was assumed that the cost function of answering the open-ended question on KSB was similar to the cost function of performing the described behavior in reality, for instance, when individuals share knowledge by writing an e-mail to a co-worker.
 
-Additionally, \emph{knowledge-sharing intention} (KSI) was measured in a closed-ended way to compare results to the verbatim responses. A measure of KSI was formed by taking the mean of two items, which were rated on 5-point Likert scales. The items read: "I will share this knowledge with my co-workers" and "I would like to share this knowledge with my co-workers." The former item represents the future-oriented and behavioral part of intention and the latter represents the motivational part of intention. Both items were based on scales on KSI used by, for example, \textcite{Bock2002} and \textcite{Lin2007}. Both were adapted to the experimental context. The items correlated highly (depending on the vignette: \emph{b} = .66-.96, \emph{p} \textless{} .001) and were therefore compiled into one index for further analysis.
-
-To code the open-ended answers, three dimensions were defined preliminarily, based on the literature, to rate the quality of the answer: the description's length, accuracy, and fit with the vignette.
-Two dimensions were added inductively during the coding process.
-Firstly, some participants answered the question with few words and therefore did not score in the quantity dimension, but were considered separately from participants who did not answer because they at least put some effort into answering the question. Secondly, some participants answered very elaborately in terms of length and content, and this effort was assigned a bonus point. Each dimension was coded as a dummy variable and an additive index was formed, ranging from zero to five.
-
-Coding was done by two independent raters.\footnote{I want to thank Lisa-Sophia Preller for serving as the second coder of this study.
- Both raters were asked to use different coding strategies, to avoid effects of the coding procedure: (1) one rater coded the cases one by one in order to have an eye on the complete answer, (2) another rater coded each dimension across all cases one by one in order to have an eye on the comparability of the ratings. The fifth dimension (high effort in answering) was not coded by both raters but added afterward and coded by a single rater, therefore no interrater reliability was calculated here.} Interrater reliability was calculated using Gwet's Agreement Coefficient (AC; \nptextcite[]{Gwet2014}). Due to the fact that there was only partial agreement in the ratings of some dimensions (see Appendix C), the raters discussed differences in coding and specified coding rules. In a second step, both raters agreed on a rating. This "negotiated" rating was used for further analysis.
-
-
-\addcontentsline{toc}{section}{Results and Discussion of Issues Emerging from the Open-Ended Question Approach}
-\section*{Results and discussion of issues emerging from the open-ended question approach}
-
-Table 1 and Table 2 give a short overview of the descriptive statistics for the dependent variables. Examples of verbatim answers to the open-ended question on KSB and their coding are provided in Appendix D.
-
-
-
-\begin{table}[h!]\sffamily
-\rowcolors{0}{}{cyan!10}
+\begin{table}[t!]
 \caption{\emph{Descriptive Statistics of KSI After Treatment} }
 \label{tab:table0}
 
@@ -262,12 +229,32 @@ Table 1 and Table 2 give a short overview of the descriptive statistics for the 
 
 \end{table} 
 
+\FloatBarrier
+Additionally, \emph{knowledge-sharing intention} (KSI) was measured in a closed-ended way to compare results to the verbatim responses. A measure of KSI was formed by taking the mean of two items, which were rated on 5-point Likert scales. The items read: "I will share this knowledge with my co-workers" and "I would like to share this knowledge with my co-workers." The former item represents the future-oriented and behavioral part of intention and the latter represents the motivational part of intention. Both items were based on scales on KSI used by, for example, \textcite{Bock2002} and \textcite{Lin2007}. Both were adapted to the experimental context. The items correlated highly (depending on the vignette: \emph{b} = .66-.96, \emph{p} \textless{} .001) and were therefore compiled into one index for further analysis.
+
+To code the open-ended answers, three dimensions were defined preliminarily, based on the literature, to rate the quality of the answer: the description's length, accuracy, and fit with the vignette.
+Two dimensions were added inductively during the coding process.
+Firstly, some participants answered the question with few words and therefore did not score in the quantity dimension, but were considered separately from participants who did not answer because they at least put some effort into answering the question. Secondly, some participants answered very elaborately in terms of length and content, and this effort was assigned a bonus point. Each dimension was coded as a dummy variable and an additive index was formed, ranging from zero to five.
 
 
-\begin{table}[h!]\sffamily
+
+
+Coding was done by two independent raters.\footnote{I want to thank Lisa-Sophia Preller for serving as the second coder of this study.
+ Both raters were asked to use different coding strategies, to avoid effects of the coding procedure: (1) one rater coded the cases one by one in order to have an eye on the complete answer, (2) another rater coded each dimension across all cases one by one in order to have an eye on the comparability of the ratings. The fifth dimension (high effort in answering) was not coded by both raters but added afterward and coded by a single rater, therefore no interrater reliability was calculated here.} Interrater reliability was calculated using Gwet's Agreement Coefficient (AC; \nptextcite[]{Gwet2014}). Due to the fact that there was only partial agreement in the ratings of some dimensions (see Appendix C), the raters discussed differences in coding and specified coding rules. In a second step, both raters agreed on a rating. This "negotiated" rating was used for further analysis.
+
+
+
+\section{Results and discussion of issues emerging from the open-ended question approach}
+
+Table 1 and Table 2 give a short overview of the descriptive statistics for the dependent variables. Examples of verbatim answers to the open-ended question on KSB and their coding are provided in Appendix D.
+
+
+
+
+\begin{table}[t!]
 \caption{\emph{Descriptive Statistics of KSB After Treatment} }
 \label{tab:table1}
-\rowcolors{0}{}{cyan!10}
+
 \begin{tabularx}{\columnwidth}{>{\raggedright\arraybackslash}p{0.3306\linewidth} >{\raggedright\arraybackslash}p{0.0766\linewidth} >{\raggedright\arraybackslash}p{0.0863\linewidth} >{\raggedright\arraybackslash}p{0.0670\linewidth} >{\raggedright\arraybackslash}p{0.0746\linewidth} >{\raggedright\arraybackslash}p{0.0841\linewidth}}
       \textbf{Variable} & \textbf{N} & \textbf{M} & \textbf{SD} & \textbf{Min} & \textbf{Max}\\ 
       \toprule
@@ -281,7 +268,6 @@ Table 1 and Table 2 give a short overview of the descriptive statistics for the 
 \textit{KSB} (intangible reward) & 501 & 2.38 & .69 & 1 & 5\\ 
 \textit{KSB} (tangible reward) & 500 & 2.47 & .74 & 1 & 5
 \end{tabularx}
-
 \end{table} 
 The descriptive statistics already show that when open-ended questions (knowledge-sharing \emph{behavior}) were presented later in the survey, there were more missing answers, whereas such a high rate of missing answers was not observed with the closed-ended question (knowledge-sharing \emph{intention}). Furthermore, in the second and third open-ended questions, participants often referred to their previous answers (e.g., "see above", "as just described") or answered in a significantly shorter way. Means for knowledge-sharing \emph{behavior} were, therefore, significantly smaller in the second and third vignettes than in the first, which did not measure knowledge-sharing \emph{intention}.
 
@@ -296,21 +282,27 @@ Accordingly, correlations between the stated knowledge-sharing \emph{intention} 
 
 
 
-\begin{table}[h!]\sffamily
+\begin{table}[t!]
+\begin{adjustwidth}{-\fullwidthlen}{}
 \caption{Correlation Matrix of KSI and KSB. \emph{Note.} \emph{N} baseline = 547, \emph{N} intang. Reward = 501, \emph{N} tang. Reward = 500.
 *p \textless{} .05. **p \textless{} .01. }
 \label{tab:table2}
 
-\begin{tabularx}{\columnwidth}{>{\raggedright\arraybackslash}p{0.2193\linewidth} >{\raggedright\arraybackslash}p{0.2116\linewidth} >{\raggedright\arraybackslash}p{0.1669\linewidth} >{\raggedright\arraybackslash}p{0.1714\linewidth}}
+\begin{tabularx}{\columnwidth + \fullwidthlen}{>{\raggedright\arraybackslash}p{0.2193\linewidth} >{\raggedright\arraybackslash}p{0.2116\linewidth} >{\raggedright\arraybackslash}p{0.1669\linewidth} >{\raggedright\arraybackslash}p{0.1714\linewidth}}
        & \textbf{KSI without treatment} & KSI appreciation & KSI achievement\\ \toprule
 KSB without treatment & .120** &  & \\ 
 KSB intang. reward &  & .052  & \\ 
 KSB tang. reward &  &  & .083 
 \end{tabularx}
+\end{adjustwidth}
 
 \end{table} 
 
+\begin{originalPurpose}
 
+This study aimed at testing a more valid way to study human behavior in surveys. I tried to overcome the limited validity of self-reported behavior in surveys. I wanted to adapt experimental real-effort tasks to a survey design by using open-ended questions and analyzing the effort participants put into answering them.
+
+\end{originalPurpose}
 Analyzing knowledge-sharing \emph{behavior} as the dependent variable, Wilcoxon signed-rank tests indicate significant differences between the treatment groups and the control group (explicit knowledge: appreciation vs. control group: \emph{z} = -5.86, \emph{p} \textless{} .001; achievement vs. control group: \emph{z} = -4.40, \emph{p} \textless{} .001; implicit knowledge: appreciation vs. control group: \emph{z} = -6.83, \emph{p} \textless{} .001; achievement vs. control group: \emph{z} = -4.89, \emph{p} \textless{} .001). Contradicting the hypothesized relationships, the data show that knowledge-sharing \emph{behavior} is significantly higher in the control group, and thus in the answer to the first vignette (baseline without treatment).
 
 However, the comparison of the two treatments might not suffer from this methodological problem as they were presented in a randomly rotated order, thus either as the second or third vignette. Comparing the two treatments regardless of the kind of knowledge shared yields a significant difference. The tangible reward treatment (\emph{M} = 2.47, \emph{SD} = 0.74) triggered more knowledge-sharing behavior than the intangible reward treatment (\emph{M} = 2.38, \emph{SD} = 0.69; \emph{z} = 2.40, \emph{p} = .017, \emph{d} = 0.10, bootstrapped 95\% CIs {[}0.02, 0.18{]}).
@@ -318,8 +310,10 @@ However, the comparison of the two treatments might not suffer from this methodo
 These results show that open-ended measures in surveys are exposed to strong order and fatigue effects. Open-ended questions presented later in the survey result in more missing answers, shorter answers, or answers referring to previous statements. Therefore, behavior reflecting minimal instead of satisficing answers was observed. Hence, these results could not be used in this study to analyze within-subject differences. However, the open-ended measure could be used as a proxy for real behavior in analyzing between-subjects differences and within-subjects comparisons between rotated vignettes (tangible and intangible rewards).
 
 
-\addcontentsline{toc}{section}{Conclusion: \\Recommendations for Future Research}
-\section*{Conclusion: Recommendations for future research}
+
+
+
+\section{Conclusion: Recommendations for future research}
 
 Using open-ended questions to measure effort as a proxy for real instead of stated behavior was not useful in a within-subjects research design.
 Due to an order effect, open answers could not serve as a reliable estimator of the likelihood of actual behavior. However, an advantage of verbatim answers is that they can still be used to identify behavioral patterns and modes of KSB. In further research, this strength of qualitative data should be taken into account more instead of merely quantifying qualitative data.
@@ -334,21 +328,20 @@ Furthermore, open-ended questions might be distributed throughout the survey ins
 By reporting the failure of the research strategy used in this study, this article intends to serve as a step in further testing the possibility of using open-ended questions as valid measures of effort in surveys and survey experiments.
 
 
-\addcontentsline{toc}{section}{}
-\section*{}
+
 
 \printbibliography
 \clearpage
 \onecolumn
-\addcontentsline{toc}{section}{Appendix A}
-\section*{Appendix A}
+
+\section{Appendix A}
 
 
-\begin{table}[h!]\sffamily
+\begin{table}[h!]
 \caption{Sample Description}
 \label{tab:table3}
 
-\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.3744\linewidth} >{\raggedright\arraybackslash}p{0.0915\linewidth} >{\raggedright\arraybackslash}p{0.1111\linewidth} >{\raggedright\arraybackslash}p{0.1285\linewidth} >{\raggedright\arraybackslash}p{0.0769\linewidth} >{\raggedright\arraybackslash}p{0.0768\linewidth}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.3744\linewidth} >{\raggedright\arraybackslash}p{0.0915\linewidth} >{\raggedright\arraybackslash}p{0.1111\linewidth} >{\raggedright\arraybackslash}p{0.1285\linewidth} >{\raggedright\arraybackslash}p{0.0769\linewidth} >{\raggedright\arraybackslash}p{0.0768\linewidth}}
      \textbf{ Variable} & \textbf{N} & \textbf{M} & \textbf{SD} & \textbf{Min} & \textbf{Max}\\ \toprule
 \textit{age} & 609 & 45.10 & 10.29 & 22 & 80\\ 
 \textit{female} & 618 & 0.61 & 0.49 & 0 & 1\\ 
@@ -359,15 +352,14 @@ By reporting the failure of the research strategy used in this study, this artic
 
 \end{table} 
 
-\addcontentsline{toc}{section}{Appendix B}
-\section*{Appendix B}
+
+\section{Appendix B}
 
 
-\begin{table}[h!]\sffamily
+\begin{table}[h!]
 \caption{Vignette plan}
 \label{tab:table4}
-\rowcolors{0}{}{cyan!10}
-\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.296\linewidth} >{\raggedright\arraybackslash}p{0.3106\linewidth} >{\raggedright\arraybackslash}p{0.3218\linewidth}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.296\linewidth} >{\raggedright\arraybackslash}p{0.3106\linewidth} >{\raggedright\arraybackslash}p{0.3218\linewidth}}
       \textbf{} & \textbf{Explicit knowledge } & \textbf{Implicit knowledge }\\ \toprule
 \textbf{Without treatment} & \textbf{Vignette 1 } \textit{During a daily routine at your workplace, you gathered information from several sources. This could also improve the work of your co-workers.}  Please decide whether you will share this information with your co-workers. \textit{(N = 319)} & \textbf{Vignette 4  } \textit{During a daily routine at your workplace, you had an experience that improved your work process. This experience could also help your co-workers.}  Please decide whether you will share your knowledge with your co-workers.  \textit{(N = 310)}\\ 
 \textbf{Intangible reward} & \textbf{Vignette 2 } \textit{During a daily routine at your workplace, you gathered information from several sources. This could also improve the work of your co-workers.} \textit{} \textit{You know that your co-workers appreciate your knowledge sharing.} \textit{} Please decide whether you will share this information with your co-workers. \textit{(N = 319)} & \textbf{Vignette 5 } \textit{During a daily routine at your workplace, you had an experience that improved your work process. This experience could also help your co-workers.} \textit{} \textit{You know that your co-workers appreciate your knowledge sharing.} \textit{} Please decide whether you will share your knowledge with your co-workers. \textit{(N = 307)}\\ 
@@ -377,15 +369,14 @@ By reporting the failure of the research strategy used in this study, this artic
 \end{table} 
 
 \pagebreak
-\addcontentsline{toc}{section}{Appendix C}
-\section*{Appendix C}
 
+\section{Appendix C}
+\begin{table}[h!]
+\begin{adjustwidth}{-\fullwidthlen}{}
 
-\begin{table}[h!]\sffamily
 \caption{\emph{Initial Interrater Reliability Open Answers on Knowledge-Sharing Behavior (KSB)}
 }
 \label{tab:table5}
-  \rowcolors*{6}{}{}%
 \begin{tabular}{>{\raggedright\arraybackslash}p{0.08\linewidth} >{\raggedright\arraybackslash}p{0.210\linewidth} >{\raggedright\arraybackslash}p{0.1885\linewidth} >{\raggedright\arraybackslash}p{0.1263\linewidth} >{\raggedright\arraybackslash}p{0.1263\linewidth} >{\raggedright\arraybackslash}p{0.1262\linewidth}}
 
         &  \textbf{Vignette order} &   & \textbf{Gwet's AC} & \textbf{Cohen's Kappa} & \textbf{Extent of Agreement}\\ \toprule
@@ -422,15 +413,18 @@ By reporting the failure of the research strategy used in this study, this artic
  &  & quantity of the answer & .5520*** & .5479*** & moderate\\
  &  & accuracy of the answer & .7015*** & .5903*** & moderate\\
  &  & fit with vignette & .9149*** & .6533*** & perfect\\  \midrule
-
-\end{tabular}
-\textit{**p \textless{} 0.001, **p \textless{} 0.01, *p \textless{} 0.05 }
-\end{table}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.08\linewidth} >{\raggedright\arraybackslash}p{0.210\linewidth} >{\raggedright\arraybackslash}p{0.1885\linewidth} >{\raggedright\arraybackslash}p{0.1263\linewidth} >{\raggedright\arraybackslash}p{0.1263\linewidth} >{\raggedright\arraybackslash}p{0.1262\linewidth}}
 \textit{Vignette 5} & Second vignette v18 & answer provided & .9830*** & .7921*** & perfect\\
  &  & quantity of the answer & .6968*** & .5625*** & moderate\\
  &  & accuracy of the answer & .7793*** & .4512*** & substantial\\
  &  & fit with vignette & .8637*** & .5912*** & substantial\\  \midrule
+
+\end{tabular}
+\textit{**p \textless{} 0.001, **p \textless{} 0.01, *p \textless{} 0.05 }
+\end{adjustwidth}
+
+\end{table}
+\begin{adjustwidth}{-\fullwidthlen}{}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.08\linewidth} >{\raggedright\arraybackslash}p{0.210\linewidth} >{\raggedright\arraybackslash}p{0.1885\linewidth} >{\raggedright\arraybackslash}p{0.1263\linewidth} >{\raggedright\arraybackslash}p{0.1263\linewidth} >{\raggedright\arraybackslash}p{0.1262\linewidth}}
 \textit{Vignette 5} & Third vignette v26 & answer provided & .9727*** & .7570*** & perfect\\
  &  & quantity of the answer & .6613*** & .4585*** & moderate\\
  &  & accuracy of the answer & .8328*** & .3934** & substantial\\
@@ -447,39 +441,41 @@ By reporting the failure of the research strategy used in this study, this artic
  \textit{**p \textless{} 0.001, **p \textless{} 0.01, *p \textless{} 0.05 }
 
 
-
+\end{adjustwidth}
 
 
 \twocolumn
-\addcontentsline{toc}{section}{Appendix D}
-\section*{Appendix D}
+
+\section{Appendix D}
 
 
-\addcontentsline{toc}{section}{Selected Open Answers on Knowledge-Sharing Behavior (KSB)}
-\section*{Selected open answers on knowledge-sharing behavior (KSB)}
 
-Note: Own translation of German answers \emph{Core public administration} 
+\section{Selected open answers on knowledge-sharing behavior (KSB)}
 
-\addcontentsline{toc}{section}{KSB-Index = 1 (does not fit the question)}
+Note: Own translation of German answers
+\\ \\
+\noindent\emph{Core public administration} 
+\\
+
 \textbf{KSB-Index = 1 (does not fit the question)}
-
+\\
 \begin{itemize} \item Everybody benefits from it.
 \item In my job, information and collegiality are the foundations of our conduct. It wouldn't work any other way.
 \item It pushes the team forward.
 \end{itemize} 
 
-\addcontentsline{toc}{section}{KSB-Index = 2}
+
 \textbf{KSB-Index = 2}
 
 \begin{itemize} \item In a one-on-one conversation \item Very precise \item 1: jour fixe 2: mailing list \end{itemize} 
 
-\addcontentsline{toc}{section}{KSB-Index = 3}
+
 \textbf{KSB-Index = 3}
 
 \begin{itemize} \item New information is transferred personally.
 \item A written report or e-mail \item Via e-mail or during coffee break time \end{itemize} 
 
-\addcontentsline{toc}{section}{KSB-Index = 4}
+
 \textbf{KSB-Index = 4}
 
 \begin{itemize} \item A group e-mail addressed to the department to inform about the outcome of the issue.
@@ -487,26 +483,27 @@ Note: Own translation of German answers \emph{Core public administration}
 \item I announce this experience within the team, so everyone can decide for himself or herself whether they can or want to use this information.
 \end{itemize} 
 
-\addcontentsline{toc}{section}{KSB-Index = 5}
+
 \textbf{KSB-Index = 5}
 
 \begin{itemize} \item If it is something very interesting in my point of view, I would forward an e-mail with the necessary documents to my colleagues. If it is an issue under the category "\ldots just so you have heard about it\ldots", I would seek direct talks and elaborate on the case.
 \item An electronic submission such as an appendix via e-mail, or a written submission such as copies distributed or an offer to approach me if required, depending on relevance.
 \item I prepare to address the issue in the next meeting and to share the new information with my co-workers.
 \end{itemize} 
-\emph{Health sector} 
+\newpage
+\noindent\emph{Health sector} 
+\\
 
-\addcontentsline{toc}{section}{KSB-Index = 1 (does not fit the question)}
 \textbf{KSB-Index = 1 (does not fit the question)}
 
 \begin{itemize} \item Leads to shorter working hours \item Because the simplification of work is good \item Improvement within the team \end{itemize} 
 
-\addcontentsline{toc}{section}{KSB-Index = 2}
+
 \textbf{KSB-Index = 2}
 
 \begin{itemize} \item In a team meeting \item In conversations \item By demonstration \end{itemize} 
 
-\addcontentsline{toc}{section}{KSB-Index = 3}
+
 \textbf{KSB-Index = 3}
 
 \begin{itemize} \item Not sure, it depends on the co-workers and their mood.
@@ -514,7 +511,7 @@ Note: Own translation of German answers \emph{Core public administration}
 \item I address it briefly within the team and wait to see if somebody is interested.
 \end{itemize} 
 
-\addcontentsline{toc}{section}{KSB-Index = 4}
+
 \textbf{KSB-Index = 4}
 
 \begin{itemize} \item In a conversation/ team meeting I make suggestions to restructure work processes and ask for opinions of others, after which the team has to decide.
@@ -522,7 +519,7 @@ Note: Own translation of German answers \emph{Core public administration}
 \item I gather co-workers, who work in a similar task field, and tell them about my experiences.
 \end{itemize} 
 
-\addcontentsline{toc}{section}{KSB-Index = 5}
+
 \textbf{KSB-Index = 5}
 
 \begin{itemize} \item I will share this experience in personal conversion and will passionately talk about my findings. Hopefully, they will keep thi\textbf{s} knowledge in mind when they are doing their job.

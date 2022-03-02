@@ -17,7 +17,7 @@
 % authordate = APA
   % number =[1]
   %
-    \documentclass[twocolumn, serif, empirical, authordate]{jote-article}
+    \documentclass[twocolumn, issue, empirical, authordate]{jote-new-article}
 
 
   %%% Add the bibliography, make sure it's in the same directory
@@ -27,16 +27,13 @@
 
   % This package is for generating Lorem Ipsum, usage: \lipsum[X] where X is the Xth paragraph of lorem ipsum.OR use[1 - 5] to generate the first five, etc.
 
-\usepackage{gensymb}
-\usepackage{graphicx}
-\usepackage[export]{adjustbox}% http://ctan.org/pkg/adjustbox
 
 
 %%% TODO: Make this a 1 - 5 option scale to reduce the chance of mistyping
 
   % Enter the title, in Title Case Please
     % Try to keep it under 3 lines
-\title{The Unsuccessful Self-treatment of a Case of `Writer’s Block': A Replication in Science Education}
+\jotetitle{The Unsuccessful Self-treatment of a Case of `Writer’s Block': A Replication in Science Education}
 
 % List abbreviations here, if any.Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
 %\abbrevs{
@@ -82,13 +79,14 @@
   \runningauthor{Ampatzidis}
 
 % The name of the Journal
-  \jname{Journal of Trial and Error}
+  \jname{Journal of Trial \& Error}
 
 % The year that the article is published
   \jyear{2021}
 
 % The Volume Number
-    %\jvolume{Fall}
+    \jvolume{2}
+    \jissue{1}
 
 % The website that's listed in the bottom right
   \jwebsite{
@@ -111,13 +109,13 @@
 % The pages of the article, comment out if rolling article
       %\jpages{1 - 12}
 % Link to the logo, might be redundant
-    \jlogo{media/jote_logo_full.png}
+ %   \jlogo{media/jote_logo_full.png}
 
 % Fill something here if this is a rolling / online first article, will make ROLLING ARTICLE show up on the first page
-    \rolling{}
+%    \rolling{}
 
 % Sets the paragraph skip to be zero, this should be in the CLS
-    \setlength{\parskip} {0pt}
+%    \setlength{\parskip} {0pt}
 
 %%% Companion Piece
 
@@ -127,10 +125,8 @@
 
         % These two set the height and width of the abstract.There's no solution to do this automatically at the moment so fiddle with these a bit. height-width should be 5mm, and ranges between 50-100 are realistic
           % Higher number means skinnier abstract
-    \heightabstract{45mm}
-    \widthaffil{40mm}
+%    \widthaffil{40mm}
 % Enter something here in order for the abstract to disappear.Be sure to also delete the abstract
-    \noabstract{yes}
 % Fill in the keywords that will appear in the abstract, max 7
     \keywordsabstract{}
 
@@ -142,7 +138,8 @@
 %%% This starts the frontmatter, which includes everything that's on the front page execpt the text of the article
     \begin{frontmatter}
     \maketitle
-
+\begin{abstract}
+\end{abstract}
       % Type your abstract between these things.Max 250 words.Be 
     \end{frontmatter}
 

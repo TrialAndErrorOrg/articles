@@ -11,7 +11,7 @@
 % Using other bibliography styles:
 % =======================
 % Not supported at the moment
-\documentclass[twocolumn, serif, empirical, authordate, seplic]{jote-article}
+\documentclass[twocolumn, empirical, authordate, issue]{jote-new-article}
 
 
 %%% Add the bibliography, make sure it's in the same directory
@@ -20,9 +20,7 @@
 %%% Add additional packages here if required. Usually not needed, except when doing things with figures and tables, god help you then
 
 % This package is for generating Lorem Ipsum, usage: \lipsum[X] where X is the Xth paragraph of lorem ipsum. OR use [1-5] to generate the first five, etc.
-\usepackage{lipsum}
 
-\usepackage{gensymb}
 % Fill in the type of article here. Doesn't matter if capitalized. 
 %%% Options
 % Empirical
@@ -32,11 +30,10 @@
 % Editorial
 
 %%% TODO: Make this a 1-5 option scale to reduce the chance of mistyping
-\papertype{Empirical}
 
 % Enter the title, in Title Case Please
 % Try to keep it under 3 lines
-\title{The Complexity of Joint Regeneration: How an Advanced Implant Could Fail by Its \textit{In Vivo} Proven Bone Component}
+\jotetitle{The Complexity of Joint Regeneration: How an Advanced Implant Could Fail by Its \textit{In Vivo} Proven Bone Component}
 
 % List abbreviations here, if any. Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
 %\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
@@ -91,14 +88,14 @@
 \runningauthor{Diloksumpan et al.}
 
 % The name of the Journal
-\jname{Journal of Trial and Error}
+\jname{Journal of Trial \& Error}
 
 % The year that the article is published
 \jyear{2021}
 
 %The Volume Number
-%\jvolume{Fall}
-
+\jvolume{2}
+\jissue{1}
 %The website that's listed in the bottom right
 \jwebsite{https://www.jtrialerror.com}
 
@@ -116,13 +113,10 @@
 % The pages of the article, comment out if rolling article
 %\jpages{1-12}
 % Link to the logo, might be redundant
-\jlogo{media/jote_logo_full.png}
 
 % Fill something here if this is a rolling/online first article, will make ROLLING ARTICLE show up on the first page
-\rolling{YES}
 
 % Sets the paragraph skip to be zero, this should be in the CLS
-\setlength{\parskip}{0pt}
 
 %%% Companion Piece
 
@@ -136,10 +130,7 @@
 
 % These two set the height and width of the abstract. There's no solution to do this automatically at the moment so fiddle with these a bit. height-width should be 5mm, and ranges between 50-100 are realistic
 % Higher number means skinnier abstract
-\heightabstract{50mm}
-\widthaffil{45mm}
 %Enter something here in order for the abstract to disappear. Be sure to also delete the abstract 
-\noabstract{}
 % Fill in the keywords that will appear in the abstract, max 7
 \keywordsabstract{cartilage, 3D (bio)printing, equine model,
 osteochondral, articular cartilage-derived progenitor cells}
@@ -154,20 +145,18 @@ osteochondral, articular cartilage-derived progenitor cells}
 \maketitle
 %Type your abstract between these things. Max 250 words. Be sure to include the \noindent, looks bad otherwise
 \begin{abstract}
-     Articular cartilage damage is a major challenge in healthcare due to the lack of long-term repair options. There are several promising regenerative implant-based approaches for the treatment, but the fixation of the implant remains a significant challenge. This study evaluated the potential for repair of an osteochondral implant produced through a novel combined bioprinting-based chondral-bone integration, with and without cells, in an equine model. Implants consisted of a melt electrowritten polycaprolactone (PCL) framework for the chondral compartment, which was firmly integrated with a bone anchor. The bone anchor was produced by extrusion-based printing of a low-temperature setting bioceramic material that had been proven to be effective for osteo-regeneration in an orthotopic, non-load bearing and non-articular site in the same species in an earlier \emph{in vivo} study. Articular cartilage-derived progenitor cells were seeded into the PCL framework and cultured for 28 days \emph{in vitro} in the presence of bone morphogenetic protein-9 (BMP-9), resulting in the formation of abundant extracellular matrix rich in glycosaminoglycans (GAGs) and type II collagen. The constructs were implanted in the stifle joints of Shetland ponies with cell-free scaffolds as controls. Clinical signs were monitored, and progression of healing was observed non-invasively through radiographic examinations and quantitative gait analysis. Biochemical and histological analyses 6 months after implantation revealed minimal deposition of GAGs and type II collagen in the chondral compartment of the defect site for both types of implants. Quantitative micro-computed tomography showed collapse of the bone anchor with low volume of mineralized neo-bone formation in both groups. Histology confirmed that the PCL framework within the chondral compartment was still present. It was concluded that the collapse of the osteal anchor, resulting in loss of the mechanical support of the chondral compartment, strongly affected overall outcome, precluding evaluation of the influence of BMP-9 stimulated cells on \emph{in vivo} cartilage regeneration. \end{abstract}
+     Articular cartilage damage is a major challenge in healthcare due to the lack of long-term repair options. There are several promising regenerative implant-based approaches for the treatment, but the fixation of the implant remains a significant challenge. This study evaluated the potential for repair of an osteochondral implant produced through a novel combined bioprinting-based chondral-bone integration, with and without cells, in an equine model. Implants consisted of a melt electrowritten polycaprolactone (PCL) framework for the chondral compartment, which was firmly integrated with a bone anchor. The bone anchor was produced by extrusion-based printing of a low-temperature setting bioceramic material that had been proven to be effective for osteo-regeneration in an orthotopic, non-load bearing and non-articular site in the same species in an earlier \emph{in vivo} study. Articular cartilage-derived progenitor cells were seeded into the PCL framework and cultured for 28 days \emph{in vitro} in the presence of bone morphogenetic protein-9 (BMP-9), resulting in the formation of abundant extracellular matrix rich in glycosaminoglycans (GAGs) and type II collagen. The constructs were implanted in the stifle joints of Shetland ponies with cell-free scaffolds as controls. Clinical signs were monitored, and progression of healing was observed non-invasively through radiographic examinations and quantitative gait analysis. Biochemical and histological analyses 6 months after implantation revealed minimal deposition of GAGs and type II collagen in the chondral compartment of the defect site for both types of implants. Quantitative micro-computed tomography showed collapse of the bone anchor with low volume of mineralized neo-bone formation in both groups. Histology confirmed that the PCL framework within the chondral compartment was still present. It was concluded that the collapse of the osteal anchor, resulting in loss of the mechanical support of the chondral compartment, strongly affected overall outcome, precluding evaluation of the influence of BMP-9 stimulated cells on \emph{in vivo} cartilage regeneration. 
+     \end{abstract}
 \end{frontmatter}
 
 
+\begin{companion}{\paperdoi}
+Nederbragt (2021)
 
-\phantomsection \addcontentsline{toc}{section}{Take home message}\section*{Take home message} 
+Ponies, joints, and the complexity
 
-The collapse of the osteal anchor of these osteochondral implants affected the integration of the construct with the native tissue and seriously compromised the mechanical stability. This precluded drawing firm conclusions about the potential for \emph{in vivo} cartilage repair of the chondral compartment, consisting of bone morphogenetic protein-9 (BMP-9) stimulated progenitor cells. Collapse occurred because bone regeneration competent materials, which had shown success in a different anatomical location, were unable to correctly anchor the implant in the complex biomechanical environment of the joint. The imperfect dimensional match, originating from the intrinsic variability of the 3D printing process, had a much bigger influence than in previous studies. When combined with the brittle nature of the material, the implant was unable to withstand the complex loading of the knee joint.
 
-\phantomsection \addcontentsline{toc}{section}{Purpose}\section*{Purpose} 
-
-The current study aimed at evaluating a cell-laden and a cell-free version of an osteochondral composite scaffold for cartilage repair that consisted of an \emph{in vivo} proven osteogenic bone scaffold for the osteal compartment and made use of a novel interface for the connection of the chondral and osteal compartments.
-
-\phantomsection \addcontentsline{toc}{section}{Introduction}\section*{Introduction} 
+\end{companion}
 
 Focal cartilage damage is a major challenge in human healthcare since it leads to an increased risk of developing early osteoarthritis \parencite{Kloppenburg2020}. Most of the available repair approaches are palliative with limited alleviation time, generating fibrous tissue with reduced mechanical strength \parencite{Kwon2019}. There are no effective treatments that can fully restore the anatomical structure and function of focal cartilage defects. This unmet clinical need drives the ongoing quest for regenerative medicine and tissue-engineering approaches for articular cartilage repair \parencite{Malda2019}.
 
@@ -179,22 +168,32 @@ Another major challenge is the connection between the osteal and chondral compar
 
 Regarding the seeding of regeneration-competent cells within the chondral compartment, articular cartilage-derived progenitor cells have been recently identified and characterized in both humans and horses as a distinct cell population that has the potential for cartilage repair \parencite{McCarthy2012, Williams2010}. This potential was further shown to be retained in combination with biomaterials \parencite{Frisbie2015, Levato2017}, making this cell type a promising candidate for a comprehensive regenerative approach. Additionally, it was recently discovered that supplementation with BMP-9 during \emph{in vitro} culture of ACPCs resulted in higher expression of gene-markers related with hyaline-like extracellular matrix production, compared to supplementation with transforming growth factor (TGF$\beta$), a more commonly used growth factor in cartilage tissue engineering \parencite{Morgan2020}. This observation sparked interest in further investigation of the potential of BMP-9-stimulated ACPCs for cartilage repair \emph{in vivo}.
 
+
+\begin{takeHomeMessage}
+The collapse of the osteal anchor of these osteochondral implants affected the integration of the construct with the native tissue and seriously compromised the mechanical stability. This precluded drawing firm conclusions about the potential for \emph{in vivo} cartilage repair of the chondral compartment, consisting of bone morphogenetic protein-9 (BMP-9) stimulated progenitor cells. Collapse occurred because bone regeneration competent materials, which had shown success in a different anatomical location, were unable to correctly anchor the implant in the complex biomechanical environment of the joint. The imperfect dimensional match, originating from the intrinsic variability of the 3D printing process, had a much bigger influence than in previous studies. When combined with the brittle nature of the material, the implant was unable to withstand the complex loading of the knee joint.
+\end{takeHomeMessage}
 The current study aimed at evaluating an osteochondral composite scaffold for cartilage repair. These constructs were composed of a combination of a previously proven osteogenic CDHA 3D printed scaffold for the osteal compartment, onto which a chondral compartment composed by MEW micro-fibrous meshes is tightly anchored. For the chondral compartment, an experimental group in which the MEW structure was seeded with ACPCs that had been stimulated for 28 days with BMP-9 before implantation \parencite{Abinzano2018}, was compared with an implant featuring a non-filled, cell-free MEW cartilage scaffold as control. It was hypothesized that 1) the CDHA scaffold would show comparable performance in the horse when implanted in the subchondral bone as in the tuber coxae in terms of firmly anchoring in the surrounding tissue and inducing bone growth; 2) the novel interface would provide a lasting connection between the osteal and chondral compartments of osteochondral graft; and 3) the engineered chondral compartment of the osteochondral graft containing the stimulated ACPCs would outperform the cell-free structures in terms of \emph{in vivo} cartilage matrix production (specifically, amount and density of type II collagen and GAGs, with resulting mechanical properties as close as possible to those of native, healthy cartilage).
 
-\phantomsection \addcontentsline{toc}{section}{Materials and Methods}\section*{Materials and Methods} 
+\section{Materials and Methods} 
 
-\phantomsection \addcontentsline{toc}{subsection}{Experimental design}\subsection*{Experimental design} 
+\subsection{Experimental design} 
 
 To assess the performance of integrated 3D printed osteochondral grafts that contained a cell-laden or a cell-free chondral compartment, the constructs were orthotopically implanted in a large animal model. Eight Shetland ponies (female, age $4-12$ years, weight $149 - 217 kg$ ($166 \pm 29 kg$)) were used and samples were implanted in the medial femoral ridge in the stifle joints. Healing was monitored for 6 months, after which the animals were humanely euthanized. The study was approved by the ethical and animal welfare body of the Utrecht University (Approval nr. AVD108002015307 WP23).
 
 Ponies were housed in individual boxes and fed a limited ration of concentrates together with hay for maintenance and free access to water. Quantitative gait analysis and radiographic examination of the stifle joints were performed before surgery for baseline values. Post-operatively, the animals were kept stabled for 6 weeks with daily monitoring of vital signs, lameness checks at walk, and examination of the operated joints for swelling or other signs of inflammation. In week 5 and 6, they were hand-walked for 10 minutes twice daily and from week 7 on, they were kept at pasture. Quantitative gait analysis and radiographic exams were performed at 3 weeks, 3 months, and 6 months post-operatively. After 6 months, ponies were humanely euthanized for harvesting samples for both quantitative and qualitative analyses. The timeline of the experiment is represented in Figure \ref{fig:figure1}.
 
-\begin{figure*}
-\centering \includegraphics[width=.8\textwidth]{articles/empirical/horse/media/image1.jpg}
-\caption{Flow chart representing timeline of the experiment including health monitoring at each phase of the experiment.}
-\label{fig:figure1}\end{figure*}
+\begin{figure*}[t]
+\begin{adjustwidth}{-\fullwidthlen}{}
 
-\phantomsection \addcontentsline{toc}{subsection}{Fabrication of construct}\subsection*{Fabrication of construct} 
+
+ \includegraphics[width=\textwidth+\fullwidthlen]{media/image1.jpg}
+\caption{Flow chart representing timeline of the experiment including health monitoring at each phase of the experiment.}
+\label{fig:figure1}
+\end{adjustwidth}
+
+\end{figure*}
+
+\subsection{Fabrication of construct} 
 
 Microfiber meshes were produced from medical-grade PCL (Purasorb® PC 12 Corbion PURAC, The Netherlands) by using MEW technology as previously described \parencite{deRuijter2019}. The meshes were produced by horizontally patterning the microfiber (diameter $= 10 \mu m$) to form continuously uniform square spacing ($300x300 \mu m$) and vertically stacking the same pattern until reaching $1300 \mu m$ in total thickness. This structure was achieved by printing with a temperature of 90\degree C, a pressure of 1.25 bar, voltage of 10 kV, and collector velocity of $ 15 mm\cdot sec^{-1} $. Additionally, printing was performed at ambient temperature ($22 - 24 \degree \text{C}$) with a humidity between $30 - 50\%$. Subsequently, PCL microfiber meshes were hydrolyzed by soaking them in sodium hydroxide (1M NaOH) for 15 minutes and washed in Milli Q water for 10 minutes 4 times. Finally, sterilization was carried out by immersion of the mesh in $70\%$ ethanol for $15$ minutes, followed by air-drying in a sterile cabinet until use.
 
@@ -204,7 +203,16 @@ Osteochondral constructs were produced by combining the PCL microfiber mesh and 
 
 After finishing the fabrication process, the osteochondral constructs were allowed to set at 37\degree C under saturated relative humidity to form a solid, biomimetic bone compartment through conversion of the PCaP composite to CDHA. Finally, the osteochondral constructs were disinfected in $70\%$ ethanol and exposed to UV-light for $1$ hour, prior to seeding of cells.
 
-\phantomsection \addcontentsline{toc}{subsection}{In Vitro pre-culture}\subsection*{In Vitro pre-culture} 
+\begin{figure}[t!]
+      \captionsetup{width=\dimexpr \linewidth + .8\fullwidthlen\relax}
+
+\begin{adjustwidth}{-\fullwidthlen}{}
+ \includegraphics[width=\linewidth]{media/image2.jpg}
+\caption{Schematic picture representing the fabrication process of the tissue engineered osteochondral constructs. \emph{Fabrication techniques and processes for forming osteochondral graft (A), Material composition of osteochondral graft and process during in vitro preculture (B).}}
+\label{fig:figure2}
+\end{adjustwidth}
+\end{figure}
+\subsection{In Vitro pre-culture} 
 
 Allogeneic articular cartilage progenitor cells (ACPCs) were obtained as previously described \parencite{Levato2017, Williams2010} from animals that were euthanized at the Utrecht University Veterinary Hospital for causes unrelated to disease or impairment of the musculoskeletal system and whose remains were donated for research purposes. Briefly, hyaline cartilage was collected in a sterile fashion, minced, and digested at $37\degree \text{C}$ with $0.2\% w\cdot v^{-1}$ pronase solution for $2$ hours, followed by $12$ hours in $0.075\%
 w\cdot v^{-1}$ collagenase solution. ACPCs were then selected using a fibronectin adhesion assay \parencite{Levato2017}. Cells were expanded in culture and stored in liquid nitrogen until further use. After thawing, cells were expanded until passage 3 prior to their use for the experiment.
@@ -215,20 +223,25 @@ streptomycin (Life Technologies, The Netherlands). Media were refreshed every 2-
 
 On the day of seeding, medium was refreshed 2 hours before seeding and scaffolds were placed inside a custom-made polydimethylsiloxane (PDMS) ring (Figure \ref{fig:figure2}) that prevented overflow of the cell suspension from the cartilage compartment to the bone scaffold. Ten million cells were suspended in $100 \mu l$ of medium and seeded on top of the constructs. The cell suspension was left to settle at the bottom of the cartilage part for 30 minutes. Afterwards, $2 ml$ of cartilage medium supplemented with $ 100 ng\cdot ml^{-1} $ of BMP-9 (PeproTech, The Netherlands) was carefully added to the well. The seeded constructs were cultured for 4 weeks prior to implantation, refreshing the medium 3 times a week.
 
-\begin{figure*}
-\centering \includegraphics[width=.8\textwidth]{articles/empirical/horse/media/image2.jpg}
-\caption{Schematic picture representing the fabrication process of the tissue engineered osteochondral constructs. \emph{Fabrication techniques and processes for forming osteochondral graft (A), Material composition of osteochondral graft and process during in vitro preculture (B).}}
-\label{fig:figure2}\end{figure*}
 
 
 
-\phantomsection \addcontentsline{toc}{subsection}{Surgical procedure}\subsection*{Surgical procedure} 
+\subsection{Surgical procedure} 
 
 Ponies were premedicated with detomidine (intravenous (IV), $ 10 \mu g\cdot kg^{-1} $) and morphine (IV,  $0.1 mg\cdot kg^{-1} $) and anesthesia was induced with midazolam (IV, $ 0.06 mg\cdot kg^{-1} $) and ketamine (IV, $ 2.2 mg\cdot kg^{-1} $). Anesthesia was maintained with isoflurane in oxygen together with continuous rate infusion of detomidine (IV, $ 10 \mu g\cdot kg^{-1} $/h) and ketamine (IV, $ 0.5 mg\cdot kg^{-1} $/h). Meloxicam (IV, $ 0.6 mg\cdot kg^{-1} $), morphine (epidural injection, $0.1 - 0.2 mg\cdot kg^{-1} $) and ampicillin (IV, $10 - 15 mg\cdot kg^{-1} $) were administered pre-operatively as analgesic medication and antibacterial preventative therapy, respectively.
 
 The medial femoral ridge of the stifle joint was exposed by arthrotomy and an osteochondral lesion (diameter $= 6 mm$, depth $= 6 mm$) was surgically created using a power drill. The surgical area was flushed by saline for cooling and removal of debris. Cell-laden constructs were implanted press-fit in a randomly chosen hind limb, with the cell-free control being implanted in the contralateral limb. After closing the arthrotomy wound in four layers in routine fashion, procaine penicillin was administered (Procapen, intramuscular (IM), $ 20 mg\cdot kg^{-1} $). Post-operatively, nonsteroidal anti-inflammatory medication (metacam, per os (PO), SID, $ 0.6 mg\cdot kg^{-1} $) was administered for 5 days and opioids (tramadol, PO, BID, $5 mg\cdot kg\textsuperscript{-1}$) were administered for $2$ days.
 
-\phantomsection \addcontentsline{toc}{subsection}{Gait analysis}\subsection*{Gait analysis} 
+\subsection{Gait analysis} 
+\begin{figure}[b!]
+      \captionsetup{width=\dimexpr \linewidth + .8\fullwidthlen\relax}
+
+\begin{adjustwidth}{-\fullwidthlen}{}
+\includegraphics[width=\linewidth]{media/image3.png}
+\caption{\emph{Schematic picture representing location of the markers for gait analysis.}}
+\label{fig:figure3}
+\end{adjustwidth} 
+\end{figure}
 
 The ponies were trained on a treadmill prior to the study using a standard protocol for treadmill habituation. Twenty-eight spherical reflective markers with a diameter of $24 mm$ (topline) and $19 mm$ (elsewhere) were attached with double-sided tape and second glue to anatomical landmarks (Figure \ref{fig:figure3}). Kinematic data were collected on a treadmill (Mustang, Fahrwangen, Switzerland) at trot using six infrared optical motion capture cameras (ProReflex, Qualisys, Gothenburg, Sweden) recording at a frame rate of $200 Hz$ for $30$ seconds at each session to obtain a sufficient number of strides.
 
@@ -236,148 +249,166 @@ To process the data, the reconstruction of three-dimensional coordinates of each
 
 
 
-\begin{figure}
-\centering \includegraphics[width=\columnwidth]{articles/empirical/horse/media/image3.png}
-\caption{\emph{Schematic picture representing location of the markers for gait analysis.}}
-\label{fig:figure3}\end{figure}
 
-\phantomsection \addcontentsline{toc}{subsection}{Radiographic examination}\subsection*{Radiographic examination} 
+
+\subsection{Radiographic examination} 
 
 Stifles were radiographed in 3 projections: lateromedial, craniolateral-caudomedial oblique and caudo-cranial projection using standard machine settings before surgery (baseline), at 3 weeks postoperatively and at 6 months, just before euthanasia.
 
-\phantomsection \addcontentsline{toc}{subsection}{Euthanasia and sample harvest}\subsection*{Euthanasia and sample harvest} 
+\subsection{Euthanasia and sample harvest} 
 
 After 6 months, animals were euthanized by induction with Midazolam (IV, $0.06mg\cdot kg\textsuperscript{-1}$ body weight) with ketamine IV, ($ 2.2 mg\cdot kg^{-1} $ body weight) and subsequent administration of sodium pentobarbital (IV, $ 1400 mg\cdot kg^{-1} $ body weight). Next, the stifle joint was exposed, and gross assessment of the medial trochlear ridge was performed, focusing on the degree of filling of the defect, the integration of repair tissue with the surrounding native tissue and the surface quality of the repair tissue. Subsequently, the entire osteochondral area containing the constructs was harvested for further analyses with the aid of a surgical bone saw. Harvested tissues were initially kept in sterilized PBS for micro-computed tomography (micro-CT) scanning, biomechanical analyses and for collecting tissue from the chondral compartment of the implant for biochemical analyses. After this, all tissues were fixed in 4\% formaldehyde for subsequent histological processing.
 
-\phantomsection \addcontentsline{toc}{subsection}{Biomechanical evaluation}\subsection*{Biomechanical evaluation} 
+\subsection{Biomechanical evaluation} 
 
 The compressive properties of the chondral compartment of the defect site, the adjacent surrounding native cartilage and the more distant surrounding native cartilage ($5 - 10 mm$ from the boundary of the defect) ($N=7$ for cell-laden constructs and $N=7$ for cell-free constructs) were evaluated with a dynamic mechanical analyzer (DMA, DMA Q800, TA instrument) equipped with a custom-size compressing probe (diameter $= 2 mm$). A ramp force of $ 0.250 N\cdot min^{-1} $ was applied until reaching $2.0 N$, to limit the deformation of sample to values below $200 \mu m$. Compression modulus was calculated as the slope of the stress-strain curve in the range between $10-12 \%$ strain.
 
-\phantomsection \addcontentsline{toc}{subsection}{Biochemical evaluation}\subsection*{Biochemical evaluation} 
+\subsection{Biochemical evaluation} 
 
 Firstly, biochemical analyses were performed on supplemental pre-implantation constructs ($ N=3 $) that had been prepared in the same batch as the constructs that were later implanted. The chondral compartments of 28-day cultured constructs were removed and freeze-dried. Next, dry samples were digested in papain (Sigma Aldrich) at $60\degree \text{C}$ overnight. DNA, sulphated glycosaminoglycan (sGAG), and alkaline phosphatase (ALP) content were quantified by performing the Quan-iT-Picogreen-dsDNA-kit assay (Molecular Probes, Invitrogen, Carlsbad, USA), the dimethylmethylene blue assay (DMMB, Sigma-Aldrich, The Netherlands) and the p-nitrophenyl phosphate assay (SIGMAFAST\texttrademark, Sigma-Aldrich), respectively.
 
 Secondly, tissue fractions that were collected from the chondral compartments of harvested implants ($ N=6 $ for cell-laden constructs, $ N=7 $ for cell-free constructs) were kept at $-80\degree \text{C}$, followed by lyophilization. Collagen content was quantified using an hydroxyproline assay (L-Hydroxyproline, Merck KGaA), and the sGAG and DNA quantification was performed as described above.
 
-\phantomsection \addcontentsline{toc}{subsection}{Microcomputed tomography}\subsection*{Microcomputed tomography} 
+\subsection{Microcomputed tomography} 
 
 Microcomputed tomography was employed for the quantitative analysis of the bone compartments from the harvested osteochondral lesions ($ N=7 $ for cell-laden constructs, $ N=7 $ for cell-free constructs). Six freshly made osteochondral grafts were scanned in a micro-CT scanner (Quantum FX-Perkin Elmer) to quantify the initial volume of PCaP material, pre-operatively. The post-mortem harvested tissue containing the defect area and the surrounding native tissue were similarly scanned (voltage $= 90 kV$, current $= 200 \mu A$, voxel size $= 30 \mu m\textsuperscript{3}$ and total scanning time $= 3 minutes$). Subsequently, the 3D-reconstructed images were processed and analyzed using image J software \parencite{Schindelin2012} and Bone J plugin \parencite{Doube2010}. Two-dimensional regions of interest (ROIs) were selected in an axial plane at the boundary between the defect and the surrounding native tissue and interpolated to form a three-dimensional volume of interest (VOI). Thresholding was performed to separately select areas of ceramics and newly formed bone respectively for further calculation. Then, the percentages of mineralized newly formed bone, of non-mineralized tissue and of remaining ceramics, including the percentage of ceramics volume loss, were quantified.
 
-\phantomsection \addcontentsline{toc}{subsection}{Histological evaluation}\subsection*{Histological evaluation} 
+\subsection{Histological evaluation} 
 
 Firstly, supplemental pre-implantation constructs ($N=3$) that had been prepared in the same batch as the ones that later were implanted were fixed in $4\%$ formaldehyde. After decalcification in $0.5M$ Ethylenediaminetetraacetic acid (EDTA) disodium salt ($pH = 8$) for $1$ day, tissues were dehydrated with graded ethanol series, cleared in xylene, and embedded in paraffin. Paraffin embedded tissues were sliced to $5 \mu m$ sections. Histochemical evaluation of GAG was done by safranin-O / fast green staining. Type I collagen (primary antibody: monoclonal antibody EPR7785, $1.083 mg\cdot ml^{-1}$, Abcam) and type II collagen (primary antibody: monoclonal antibody II-II6B3, $0.06 mg\cdot ml^{-1}$, DSHB) were visualized by immunohistochemistry.
 
 The tissues that were harvested after $6$ months ($N=7$ for cell-laden constructs, $N=7$ for cell-free constructs) were kept in $4\%$ formaldehyde and then decalcified in $0.5M$ EDTA disodium salt ($pH = 8$) for $24$ weeks. Decalcified tissues were cut into two halves before processing to enable visual inspection of the center of the lesion. Tissues were dehydrated with graded ethanol series, cleared in xylene and finally embedded in paraffin. Paraffin embedded tissues were sliced to $5 \mu m$ sections. For assessment of morphology and cell distribution, hematoxylin-eosin staining (Mayer's haematoxylin, Merck 109249 and eosin, Merck 115935) was performed. GAG and collagen alignment were assessed after safranin-O / fast green and picrosirius red staining, respectively. Types I collagen and type II collagen were visualized by immunohistochemistry, as described above. For immunohistochemistry, all samples were treated according to previously published protocols \parencite{Levato2017}. Stained histological slides were imaged using a light microscope (Olympus BX51, Olympus Nederland B.V.), equipped with a digital camera (Olympus DP73, Olympus Nederland B.V.). To observe the picrosirius red stained slides, a polarizer was also mounted to the light microscope.
 
-\phantomsection \addcontentsline{toc}{subsection}{Statistical analysis}\subsection*{Statistical analysis} 
+\subsection{Statistical analysis} 
 
 Normality of distribution of the data was assessed from skewness, kurtosis, and Q-Q plots. Results were reported as mean $\pm$ standard deviation. Wilcoxon signed rank tests were used to analyze the biochemical, biomechanical, and micro-CT data. Statistical significance was set at $p = 0.05$. All tests were performed using Matlab (version R2018b, The MathWorks, Inc.).
 
 To evaluate the gait parameters, stride-level data were analyzed with R software (version 3.6.0, R Core Team, 2019), using package NLME (version 3.1-137) for mixed modelling. Dependent variables were investigated for normality using normal probability plotting and examining for skewness and kurtosis. If not normally distributed, data were transformed to permit linear mixed modeling. The random effect was subject and timepoint was the fixed effect. Significance was set at p \textless{}
 0.05 and p-values were corrected using the false discovery rate method. Residual plots were checked for heteroscedasticity versus the outcome, as well as for normality in Q-Q plots.
 
-\phantomsection \addcontentsline{toc}{section}{Results}\section*{Results} 
+\section{Results} 
 
-\phantomsection \addcontentsline{toc}{subsection}{In vitro}\subsection*{In vitro} 
-
+\subsection{In vitro} 
+\begin{figure}[b]
+\begin{adjustwidth}{-\fullwidthlen}{}
+ \includegraphics[width=.965\linewidth]{media/image4.jpg}
+\caption{\emph{Representative pictures of cell-laden and cell-free osteochondral constructs at the time of implantation.} Cell-laden (A) and cell-free constructs (B) at the time of implantation. Positive safranin-O staining indicating the presence of glycosaminoglycans (pink = positive), positive type II collagen (brown = positive) and negative type I collagen (brown = positive) immunohistochemistry were observed in the chondral compartment of the cell-laden constructs before implantation (C).}
+\label{fig:figure4}
+\end{adjustwidth}
+\end{figure}
 After 4 weeks of preculture, macroscopic characterization of tissue formation and hyaline-like extracellular matrix production were assessed both quantitatively and qualitatively within the chondral compartment of the cell-laden osteochondral constructs. The BMP-9 stimulated ACPCs meant to colonize the MEW scaffolds formed neo-tissue that had grown into a disc shape after 3 weeks of culture. During the 4\textsuperscript{th} week of culture, outgrowth from the MEW meshes was observed (Figure \ref{fig:figure4}A) from this construct. Cell-free constructs did not change after immersion in growth factor-free medium for 4 weeks (Figure \ref{fig:figure4}B). Biochemical analyses of the chondral compartment of the cell-laden constructs were performed to quantify matrix production of stimulated cells toward chondrogenic lineage and osteogenic lineage, which revealed the presence of GAGs (GAGs$\cdot$ DNA\textsuperscript{-1} was $199.7 \pm 67.7 \mu g\cdot \mu g^{-1}$) and ALP activity (ALP·DNA\textsuperscript{-1} was $3702 \pm 2111 U\cdot\mu g^{-1}$), respectively. Safranin-O staining and type II collagen immunohistochemistry were also performed to visualize hyaline-liked matrix production from stimulated cells, which revealed abundant deposition of GAGs and type II collagen within the constructs after 3 weeks of \emph{in vitro} culture (Figure \ref{fig:figure4}C), showing that the chondral compartments of the constructs (meant for subsequent implantation) were filled with a hyaline cartilage-like tissue. No preferential alignment of the collagen fibers could be observed.
 
-\begin{figure}
-\centering \includegraphics[width=.965\columnwidth]{articles/empirical/horse/media/image4.jpg}
-\caption{\emph{Representative pictures of cell-laden and cell-free osteochondral constructs at the time of implantation.} Cell-laden (A) and cell-free constructs (B) at the time of implantation. Positive safranin-O staining indicating the presence of glycosaminoglycans (pink = positive), positive type II collagen (brown = positive) and negative type I collagen (brown = positive) immunohistochemistry were observed in the chondral compartment of the cell-laden constructs before implantation (C).}
-\label{fig:figure4}\end{figure}
 
-\phantomsection \addcontentsline{toc}{subsection}{Evaluation during surgical implantation}\subsection*{Evaluation during surgical implantation} 
+
+\subsection{Evaluation during surgical implantation} 
 
 Both cell-laden and cell-free constructs were press-fit implanted into the surgically created defect sites. During this procedure, the slightly irregular outer edge of the osteal part of the construct hampered easy sliding of the construct down into the defect and some fragmentations of the edges of the bioceramic scaffold was observed during the procedure. This was similar for the cell-laden and cell-free constructs, which had identical osteal parts (Figure \ref{fig:figure5}). Further, of some cell-laden constructs, the surface of the chondral compartment was not level over the entire circumference with the surrounding native cartilage after press-fitting into the defect site.
 
 \begin{figure}
-\centering \includegraphics[width=\columnwidth]{articles/empirical/horse/media/image5.jpg}
+\centering \includegraphics[width=\columnwidth]{media/image5.jpg}
 \caption{\emph{Representative pictures show white fragments of broken ceramic after press-fitting cell-laden and cell-free osteochondral constructs into the defect.} Black arrows indicate the position of some visible bioceramic fragments. White arrows indicate protrusion of the chondral compartment}
 \label{fig:figure5}\end{figure}
 
 
-\phantomsection \addcontentsline{toc}{subsection}{Post-operative clinical monitoring}\subsection*{Post-operative clinical monitoring} 
+\subsection{Post-operative clinical monitoring} 
 
 After surgical implantation, the animals were checked clinically for physical appearance and vital signs on a daily basis. All ponies recovered well from anesthesia after surgery and passed uneventfully through the rehabilitation period without any abnormalities in body temperature or behavior, with good weight-bearing on all operated limbs and no clinical signs of lameness during the entire period, with the exception of a single pony that developed severe lameness at 10 weeks after surgery. This pony was treated with anti-inflammatory medication and examined radiographically, which revealed extensive osteolysis around the created lesion. Because of persistent discomfort, the pony was euthanized at 12 weeks after surgery. Therefore, it was excluded from all analyses.
 
-\phantomsection \addcontentsline{toc}{subsection}{Gait analysis}\subsection*{Gait analysis} 
+\subsection{Gait analysis} 
 
 Objective gait analysis was used to check for lameness or other signs of dysfunction of the musculoskeletal system. Objective data retrieved before implantation and at the end of the experiment were assessed for relevant parameters, including symmetry parameters and limb parameters.
 
-\phantomsection \addcontentsline{toc}{subsubsection}{Symmetry parameters}\subsubsection*{Symmetry parameters} 
+\subsubsection{Symmetry parameters} 
 
 Front and hind limb lameness were analyzed through evaluation of the symmetry parameters of the head (MinDiff Head (Figure \ref{fig:figure6}A)) and of the pelvis (MinDiff Pelvis (Figure \ref{fig:figure6}B)). These values reflect the differences in minimal vertical displacement with a negative MinDiff indicating a left-sided asymmetry and a positive MinDiff a right-sided asymmetry. In the treated ponies (except for the case referred to above that was euthanized), for both the head and the pelvis, there was no clear pattern in the direction of the asymmetries between baseline and endpoint and those differences between baseline and endpoint were minimal and statistically not significant. Therefore, symmetry measures could not discriminate between cell-laden and cell-free constructs. Further, there was also no clear effect of timepoint on pelvis roll and pelvis yaw range of motion (Supplementary Figure \ref{fig:sup1}), however, pelvis pitch range of motion (ROM) (Figure \ref{fig:figure6}C) decreased for all subjects with almost 20\% over time (Supplementary Table \ref{tab:table1}).
 
-\phantomsection \addcontentsline{toc}{subsubsection}{Limb parameters, effects of time}\subsubsection*{Limb parameters, effects of time} 
+\subsubsection{Limb parameters, effects of time} 
 
 There was a significant effect of time for the height the toe was lifted from the surface during the swing phase of the limb that decreased significantly in the cell-free treated limbs, but not in the limbs treated with cell-laden constructs (Supplementary Table \ref{tab:table1}). The only other significant effect of time was a decrease in the extension of the metacarpophalangeal joint of the forelimb ipsilateral to the hind limb that had been treated with cell-laden constructs, indicating unloading of that forelimb (Supplementary Table \ref{tab:table1}).
 
-\phantomsection \addcontentsline{toc}{subsubsection}{Limb parameters, differences between cell-laden and cell-free at endpoint}\subsubsection*{Limb parameters, differences between cell-laden and cell-free at endpoint} 
+\subsubsection{Limb parameters, differences between cell-laden and cell-free at endpoint} 
 
 There were no significant differences between any of the cell-laden and cell-free limb parameters at the end of the experiment. Results from the linear mixed model are shown in Supplementary Table \ref{tab:table2}.
 
 \begin{figure*}
-\centering \includegraphics[width=\textwidth]{articles/empirical/horse/media/image6.jpg}
+\captionsetup{width=\dimexpr \textwidth}
+\begin{adjustwidth}{-\fullwidthlen}{}
+\includegraphics[width=\textwidth+\fullwidthlen]{media/image6.jpg}
 \caption{\emph{Gait analysis: Symmetry parameters. \textit{Symmetry data of the head (A) and pelvis (B) show no consistent differences over time. However, pelvis pitch decreased consistently in all individuals (C).}}}
-\label{fig:figure6}\end{figure*}
+\label{fig:figure6}
+\end{adjustwidth}
+\end{figure*}
 
 
-\phantomsection \addcontentsline{toc}{subsection}{Radiographic examination}\subsection*{Radiographic examination} 
+\subsection{Radiographic examination} 
 
 Healing progression within the osteal compartment of the implanted osteochondral constructs was followed up non-invasively through radiographic examination. On the radiographs taken at baseline, 3, and 6 months, no obvious abnormalities in term of the architecture of the surrounding native tissue were detected, other than the defects that had been created. This was with the exception of the pony that developed severe lameness. In that animal, severe osteolysis was noted at the implantation site 3 months after the implantation (Supplementary Figure \ref{fig:sup2}).
 
-\phantomsection \addcontentsline{toc}{subsection}{Post-mortem macroscopic evaluation of the repair tissue}\subsection*{Post-mortem macroscopic evaluation of the repair tissue} 
+\subsection{Post-mortem macroscopic evaluation of the repair tissue} 
 
 Macroscopic characteristics, for instance, color, appearance, and filling level of the lesion, were observed and documented before harvesting tissue sample for further analyses. After 6 months, macroscopic evaluation revealed that the defects were filled with repair tissue that in all cases did not fill the entire defect and remained lower than the level of the surrounding native cartilage in both cell-laden and cell-free treatments (Figure \ref{fig:figure7}A). The color of the repair tissue was variable (from reddish, to yellow and translucent) within the different treatments (Figure \ref{fig:figure7}B). In some cases, ceramic fragments could be observed within the repair tissue of the chondral compartment.
 
-\begin{figure}
-\centering \includegraphics[width=\columnwidth]{articles/empirical/horse/media/image7.jpg}
+\begin{figure}[h!]
+\begin{adjustwidth}{-\fullwidthlen}{}
+
+\centering \includegraphics[width=\columnwidth+\fullwidthlen]{media/image7.jpg}
 \caption{\emph{Macroscopic appearance of the repair tissue and surrounding native tissue in all individual animals at euthanasia.} Macroscopic appearance of the defect site and surrounding femoral ridge (A). Close-ups of macroscopic appearance at the defect site (B).}
-\label{fig:figure7}\end{figure}
+\label{fig:figure7}
+\end{adjustwidth}
+
+\end{figure}
 
 
-\phantomsection \addcontentsline{toc}{subsection}{Biochemical analyses of repair tissue within the chondral compartment}\subsection*{Biochemical analyses of repair tissue within the chondral compartment} 
+\subsection{Biochemical analyses of repair tissue within the chondral compartment} 
 
 The deposition of GAGs and collagen, the two main elements that compose cartilage extracellular matrix, were quantified within the chondral compartment of the osteochondral graft 6 months after implantation. There were no significant differences in either GAGs (cell-laden: $30.46 \pm 15.95 \mu g\cdot\mu g^{-1}$, cell-free: $24.44 \pm 15.31 \mu g\cdot g^{-1}$) or collagen expressed per DNA (cell-laden: $79.66 \pm 91.21 \mu g\cdot\mu g^{-1}$, cell-free: $134.21\pm 153.73 \mu g\cdot\mu g^{-1}$) between the chondral compartments of the cell-laden and cell-free constructs (Figure \ref{fig:figure8}A, 8B and Supplementary Figure \ref{fig:sup3}). However, all values were substantially lower than those from native cartilage (Figure \ref{fig:figure8}, grey dotted line) that was harvested distantly from the defect site.
 
-\begin{figure}
-\centering \includegraphics[width=\columnwidth]{articles/empirical/horse/media/image8.jpg}
+\begin{figure}[h!]
+\begin{adjustwidth}{-\fullwidthlen}{}
+
+\includegraphics[width=\columnwidth+\fullwidthlen]{media/image8.jpg}
 \caption{\emph{Biochemical analysis from chondral compartment at the defect site after an implantation for 6 months.} Quantitative analysis of GAG·DNA\textsuperscript{-1} between cell-laden and cell-free treatments (A). Quantitative analysis of collagen$\cdot$ DNA\textsuperscript{-1} between cell-laden and cell-free treatments (B) ($x$ = mean). Grey dotted line indicates level in native cartilage.}
-\label{fig:figure8}\end{figure}
+\label{fig:figure8}
+\end{adjustwidth}
+\end{figure}
 
-
-\phantomsection \addcontentsline{toc}{subsection}{Biomechanical properties of the repair tissue within the chondral compartment}\subsection*{Biomechanical properties of the repair tissue within the chondral compartment} 
+\subsection{Biomechanical properties of the repair tissue within the chondral compartment} 
 
 Compressive strength of the chondral compartment was assessed and compared in three different locations: the defect site, adjacent surrounding native tissue, and distant surrounding native tissue (Figure \ref{fig:figure9}A), the latter two as control measurements from healthy cartilage tissue. There were no significant differences in the Young's modulus of the chondral compartment between cell-laden ($0.31 \pm 0.13 MPa$) and cell-free ($0.42 \pm 0.19 MPa$) constructs (Figure \ref{fig:figure9}B). This was also true for two sites of the native cartilage, one close to the border of the defect (cell-laden: $1.75 \pm 0.80 MPa$, cell-free: $2.22 \pm 0.48 MPa$) and one at $5 - 10 mm$ from the defect boundary (cell-laden: $1.86 \pm 0.78 MPa$, cell-free: $2.19 \pm 0.77 MPa$) (Figure \ref{fig:figure9}C, 9D). However, the compression modulus of the native tissue was substantially higher (approximately $5-6$-fold) than inside the chondral compartment of the implant.
 
 
-\begin{figure}
-\centering \includegraphics[width=\columnwidth]{articles/empirical/horse/media/image9.jpg}
+\begin{figure}[h!]
+\centering \includegraphics[width=\columnwidth]{media/image9.jpg}
 \caption{\emph{Compression modulus of the chondral compartment at the defect site and surrounding native cartilage of harvested samples 6 months after implantation.} Schematic picture demonstrating locations where mechanical properties were analyzed (A). Compression modulus of the chondral compartment of cell-laden and cell-free constructs at 6 months (B) and at two sites of the native cartilage, close to the border of the defect (C) and further away (D). ($x$ = mean).}
 \label{fig:figure9}\end{figure}
 
-\phantomsection \addcontentsline{toc}{subsection}{Micro-CT evaluation of repair tissue within the osteal compartment}\subsection*{Micro-CT evaluation of repair tissue within the osteal compartment} 
+\subsection{Micro-CT evaluation of repair tissue within the osteal compartment} 
 
 Bone healing and integration after was assessed through micro-CT scanning 6 months after implantation. Micro-CT images showed significant bone loss surrounding the implant in both the cell-laden and the cell-free groups, which could be visualized as black areas between the porous bioceramic structure (white) and the surrounding native bone (grey). However, mineralized bone formation could be visualized in some scaffolds from both groups with an integration to neighboring native bone (Figure \ref{fig:figure10}A). Statistically, there were no significant differences in mineralized bone formation (cell-laden: $6.14\% \pm 10.09\%$, cell-free: $4.73\% \pm 4.93\%$) and non-mineralized tissue (cell-laden:  $ 81.38\% \pm 15.37\% $, cell-free:  $ 74.71\% \pm 12.44\%$). However, there was a significant difference in the amount of remaining ceramics between the two groups (cell-laden:  $ 12.48\% \pm 9.75\% $, cell-free:  $ 20.56\% \pm 10.54\% $($p = 0.0313$)) (Figure \ref{fig:figure10}B). In line with this, there was a difference in the degradation of ceramics in the cell-laden construct versus the cell-free constructs (cell-laden:  $ 79.02 \pm 16.18 \% $, cell-free:  $ 63.20 \pm 13.90 \% $($p = 0.0313$)) (Figure \ref{fig:figure10}C).
 
-\begin{figure*}[t]
-\centering \includegraphics[width=\textwidth]{articles/empirical/horse/media/image10.jpg}
+\begin{figure*}[t!]
+\begin{fullwidth}
+\centering \includegraphics[width=\textwidth+\fullwidthlen]{media/image10.jpg}
 \caption{\emph{Representative micro-CT images from the middle of the sagittal plane of the constructs and quantification from 3D-reconstruction of micro-CT.} Representative micro-CT images from the middle of the sagittal plane of the constructs (white = ceramics, grey = mineralized tissue, black = non-mineralized tissue) (A). Quantitative analysis from micro-CT reconstruction showing percentage of mineralized bone formation, non-mineralized tissue, and remaining ceramics (B). The volume loss of ceramics was slightly higher in the cell-laden constructs compared to the cell-free ones (C).}
-\label{fig:figure10}\end{figure*}
+\label{fig:figure10}
+\end{fullwidth}
+\end{figure*}
 
-\phantomsection \addcontentsline{toc}{subsection}{Histological evaluation of the osteochondral repair tissue}\subsection*{Histological evaluation of the osteochondral repair tissue} 
+\subsection{Histological evaluation of the osteochondral repair tissue} 
 
 Histological slides were assessed to identify the composition of the repair tissue matrix deposited within the defect site. In the chondral compartment, the defect sites of both cell-laden and cell-free structures were filled with fibrous repair tissue with degenerated and necrotic superficial surface with minimal inflammatory reaction, as revealed by H\&E and safranin-O staining (Figure \ref{fig:figure11}, Supplementary Figure \ref{fig:sup4}, Supplementary Figure \ref{fig:sup6}, and Supplementary Figure \ref{fig:sup7}). Integration at the boundary of the defect between chondral repair tissue and surrounding native cartilage was observed in both groups. The production of GAGs, type II collagen, and type I collagen was very limited in the repair tissue in both groups (Figure \ref{fig:figure11}). The organization of the collagen fibrils in both groups seemed random, without any hierarchical pattern that could be identified by polarized light imaging of picrosirius red staining. Additionally, the special distribution of PCL-microfibers, which had disappeared because of the xylene treatment during sample preparation, was still traceable within the chondral compartment of both groups (1 out of 7 for cell-laden and 5 out of 7 for cell-free structure).
 
 In the bone compartment, there was positive staining for type I collagen in some scaffolds from both groups at places where there were islands of new mineralized bone formation. There were multifocal coalescing spots of inflammatory reaction characterized by macrophages, multinucleated giant cells, lymphocytes, eosinophils, and plasma cells (Supplementary Figure \ref{fig:sup5}, Supplementary Figure \ref{fig:sup6}, Supplementary Figure \ref{fig:sup7}).
 
 \begin{figure*}[b]
-\centering \includegraphics[width=\textwidth]{articles/empirical/horse/media/image11.jpg}
+\centering \includegraphics[width=\textwidth]{media/image11.jpg}
 \caption{\emph{Representative histological images from the center part of cell-laden and cell-free structures after implantation for 6 months.} Safranin-O/fast green (red color = positive) (A, E); Collagen type II (brown color = positive) (B, F); Picrosirius-red (C, G); collagen type I (brown color = positive) (D, H) of cell-laden (A-D) and cell-free structures (Scale bar = $1mm$).}
 \label{fig:figure11}\end{figure*}
 
-\phantomsection \addcontentsline{toc}{section}{Discussion}\section*{Discussion} 
+\begin{originalPurpose}
+The current study aimed at evaluating a cell-laden and a cell-free version of an osteochondral composite scaffold for cartilage repair that consisted of an \emph{in vivo} proven osteogenic bone scaffold for the osteal compartment and made use of a novel interface for the connection of the chondral and osteal compartments.
+\end{originalPurpose}
+\section{Discussion} 
 
 This study aimed to evaluate the efficacy of an engineered osteochondral composite scaffold that was fabricated by combining a proven osteogenic CDHA scaffold for the osteal compartment with a novel interface for the connection between the chondral and osteal compartments. For the chondral compartment, BMP-9 stimulated cell-laden and cell-free constructs were compared. The cell-laden constructs contained \emph{in vitro} formed tissue that was rich in GAGs and type II collagen, obtained by seeding Articular Cartilage Progenitor Cells (ACPCs) and stimulating them with BMP-9 for 4 weeks prior to implantation. After implantation in an equine osteochondral defect for 6 months, there was poor chondral repair tissue in both the cell-laden and cell-free implants. The repair tissue was akin to fibrocartilage and was characterized by the presence of fibrous tissue with low content of GAGs and type II collagen and a degenerated surface. The CDHA scaffold had failed to act as an osteal anchor, as evidenced by the radiographical images showing misalignment and partial collapse of the CDHA construct, the presence of CDHA fragments within the defect and in the surrounding tissues, and a limited volume of newly formed calcified bone in the pores of the osteal anchor.
 
@@ -396,7 +427,7 @@ During the \emph{in vivo} post-operative monitoring of the animals, the clinical
 It can be concluded that even seemingly minor modifications of a successful implant may have grave consequences and extrapolation is dangerous in the complex \emph{in vivo} situation. In this case, the failure of the osteal compartment of the construct, the use of which seemed well-backed by solid \emph{in vivo} data, did not permit drawing conclusions about the original hypotheses. Given the relatively frequently occurring, rather disappointing results of \emph{in vivo}
 orthotopic testing of promising techniques for joint repair, it may be wise to put more emphasis on performing pilot experiments before embarking on a full-scale \emph{in vivo} study in a large animal experiment \parencite{VindasBolanos2017}. Functional joint repair remains a huge challenge that has not been addressed to some satisfying extent during the last decades, despite many promising approaches. It is likely that the quest for a real solution will go on for some time by trial and error with more errors to come. Those errors are inevitable and need to be made but they should take the least possible toll on experimental animals.
 
-\phantomsection \addcontentsline{toc}{section}{Conclusion}\section*{Conclusion} 
+\section{Conclusion} 
 
 This study presented the results from the evaluation of a cell-laden and cell-free versions of an osteochondral implant for cartilage repair in a challenging \emph{in vivo} large animal model. The osteal anchor of this osteochondral implant, composed of a bioceramic material that had previously been proven to facilitate mineralized new bone formation in the same species, failed to perform as an effective fixation with sufficient stabilization for both cell-laden and cell-free osteochondral implants. This insufficient fixation was evidenced by the extensive osteolysis, the collapse and misalignment of the osteal anchor, and the limited volume of newly formed bone. The failure of the bone anchor hindered the evaluation of the two versions of the chondral compartment for cartilage repair. The study shows that, even after an equivalent ceramic bone component had shown very satisfactory results in the same species, minor differences in the implant and a change in testing condition proved to be enough to lead to completely different results, in this case precluding drawing conclusions about the effect of the principal variable. This outcome stresses the need of carrying out \emph{in vivo} pilot studies under exactly the same conditions before moving into a larger \emph{in vivo} study.
 
@@ -404,15 +435,15 @@ This study presented the results from the evaluation of a cell-laden and cell-fr
 \setlength{\bibhang}{\parindent}
 
 \printbibliography
-\phantomsection \addcontentsline{toc}{section}{Acknowledgments}\section*{Acknowledgments} 
+\section{Acknowledgments} 
 
 The authors would like to thank Dr. J.P.A.M. (Thijs) van Loon and Dr. Janny de Grauw for assistance with anesthesia, Dr. S. Veraa for assistance with the radiographic examination, and Paulina Nunez Bernal for assistance with the biomechanical characterization. The authors also wish to acknowledge the funding support from Royal Thai government scholarship (Thailand, PD), the Dutch Arthritis Foundation (LLP-12 and LLP-22), the AO Foundation (Collaborative Research Center AO Foundation, 3D OC Constructs, FA), the European Research Council under grant agreement N0. 647426 (3D-JOINT, JM), and the UK Regenerative Medicine Platform (UKRMP, MR/L02280X/1). The primary antibodies against collagen type II (II-II6B3) developed by T. F. Linsenmayer and E. S. Engvall, respectively, were obtained from the DSHB developed under the auspices of the NICHD and maintained by the University of lowa, Department of Biology, lowa City, IA, USA.
-\phantomsection \addcontentsline{toc}{section}{Companion Piece}\section*{Companion Piece} 
+\section{Companion Piece} 
 
 \noindent An important discipline in biomedical science is the repair of damaged organs by in vitro cultured differentaited stem cells. This article evaluates an article in this field, entitled "The complexity of joint regeneration", by Diloksumpan et al. (2021), who described a regeneration experiment of artificial damage of the joint of ponies. The experiment failed an I describe the possible cause of this failure by discussing the design of the experiment in the light of J.S.Mill's Method of Difference, published in 1843. I continue with a discussion of the concept of complexity that was introduced by the authors of the paper, by pointing out that three types of complexity may be distinguished; one of these is complicatedness which characterizes the assumed complexity of the joint experiment. I propose that this complicatedness can be solved by the use of the method of difference.
 \fullcite{Nederbragt2021}
     \newpage
-    \section*{License}
+    \section{License}
         \begin{wrapfigure}[2]{L}{0.08\textwidth}%
         \vspace{-12pt}
         \includegraphics[width=0.1\textwidth]{media/by}%
@@ -423,7 +454,7 @@ The authors would like to thank Dr. J.P.A.M. (Thijs) van Loon and Dr. Janny de G
 
 \onecolumn
 
-\phantomsection \addcontentsline{toc}{section}{Supplementary information}\section*{Supplementary information} 
+\section{Supplementary information} 
 
 
 %\begin{table*}[ht!] \sffamily
@@ -448,7 +479,7 @@ The authors would like to thank Dr. J.P.A.M. (Thijs) van Loon and Dr. Janny de G
 %\label{tab:table1}
 %\end{table*}
 
-\begin{table*}[ht!] \sffamily
+\begin{table*}[ht!] 
 \begin{tabularx}{\linewidth}{>{\raggedright}p{.25\textwidth}>{\raggedleft\arraybackslash}Xrp{.005\textwidth}l>{\raggedleft\arraybackslash}Xrp{.005\textwidth}lrr}   \multicolumn{11}{c}{\cellcolor[HTML]{ffffff}}\\[-2ex]
 \toprule Variable & \multicolumn{4}{c}{Baseline} & \multicolumn{4}{c}{Endpoint}  & \% Difference & P-value\tabularnewline \midrule  
 MinDiff Head & $  -1.00$ & $ (-5.08$ & $-$ & $3.08)  $& $  0.33$ & $ (-3.75$ & $-$ & $4.41)  $& & $  0.59  $\tabularnewline Pelvis roll ROM & $ 4.81$ & $ (3.67$ & $-$ & $5.94)  $& $ 5.21$ & $ (4.08$ & $-$ & $6.35)  $&$  8.50 $& $  0.24  $ \tabularnewline
@@ -488,7 +519,7 @@ Limb height (mm) & $ 84.6$ & $ (67.4$ & $-$ & $101.9)  $& $ 81.7$ & $ (64.4$ & $
 
 
 \begin{figure*}
-\centering \includegraphics[width=\columnwidth]{articles/empirical/horse/media/image12.jpg}
+\centering \includegraphics[width=\columnwidth]{media/image12.jpg}
 \caption{\emph{Gait analysis: symmetry parameters.}
  Pelvis roll and yaw joint angles (A,B) showed no significant differences between baseline and 6 months after implantation and neither did the kinematic hind limb parameters (C, D, E) between baseline and 6 months after induction. Limb height of the hind limbs (F) decreased for both hindlimbs, but only significantly for the cell free group, though there was no difference in limb height between cell-laden and cell-free groups at 6 months after implementation.}
 \label{fig:sup1}\end{figure*}
@@ -496,40 +527,41 @@ Limb height (mm) & $ 84.6$ & $ (67.4$ & $-$ & $101.9)  $& $ 81.7$ & $ (64.4$ & $
 
 
 \begin{figure*}
-\centering \includegraphics[width=\columnwidth]{articles/empirical/horse/media/image13.jpg}
+\centering \includegraphics[width=\columnwidth]{media/image13.jpg}
 \caption{\emph{Representative radiographic images (latero-medial and craniolateral-caudomedial oblique projections) of the stifle of ponies before implantation, 3 months after implantation and 6 months after implantation.}  Red arrows indicate the implantation sites. No radiographic abnormalities were noted in any of the ponies (1\textsuperscript{st} row), except for the pony that became severely lame at 10 weeks. In this animal extensive osteolysis was observed (2\textsuperscript{nd} row).}
 \label{fig:sup2}\end{figure*}
 
 
 
 \begin{figure}
-\centering \includegraphics[width=\columnwidth]{articles/empirical/horse/media/image14.jpg}
+\centering \includegraphics[width=\columnwidth]{media/image14.jpg}
 \caption{\emph{Amount of GAG that was normalized with amount of DNA.}  Amount of GAG/DNA as absolute value (A) and as a ratio (B) in the individual animals. Amount of collagen/DNA as absolute value (C) and as a ratio (D) in the individual animals.}
 \label{fig:sup3}\end{figure}
 \newpage
 \twocolumn
 
-
+\begin{adjustwidth}{-\fullwidthlen}{}
 \begin{figure}
-\centering \includegraphics[width=\columnwidth]{articles/empirical/horse/media/image15.jpg}
-\caption{\emph{Representative Hematoxylin-Eosin (H\&E) staining of 6-month harvested samples showing a degenerated and necrotic superficial layer at the surface of the chondral compartment featuring inflammatory cells.}  Black arrow indicates area of degenerated cells, P = plasma cells}
+\includegraphics[width=\columnwidth]{media/image15.jpg}
+\caption{\emph{Representative Hematoxylin-Eosin (H\&E) staining of 6-month harvested samples showing a degenerated and necrotic superficial layer at the surface of the chondral compartment featuring inflammatory cells.}\\  Black arrow indicates area of degenerated cells, P = plasma cells}
 \label{fig:sup4}\end{figure}
 
 
 \begin{figure}
-\centering \includegraphics[width=.8\columnwidth]{articles/empirical/horse/media/image16_1.jpg}
+\centering \includegraphics[width=.8\columnwidth]{media/image16_1.jpg}
 \caption{\emph{Representative immunohistochemistry of collagen type I staining of 6-month harvested samples from cell-laden and cell-free osteochondral structures}}
 \label{fig:sup5}\end{figure}
 
 \begin{figure}
-\centering \includegraphics[width=1.02\columnwidth]{articles/empirical/horse/media/image17.jpg}
+\centering \includegraphics[width=1.02\columnwidth]{media/image17.jpg}
 \caption{\emph{Representative Hematoxylin-Eosin (H\&E) staining of 6-month harvested samples from cell-laden osteochondral structures}  CR = Remaining ceramic, NB = Newly formed bone, MEW = pattern of PCL-microfibers, * = Multifocal foci of inflammatory reaction, \# = artifact from cutting, EO = Eosinophil, L = Lymphocyte}
 \label{fig:sup6}\end{figure}
 
 
 \begin{figure}
-\centering \includegraphics[width=\columnwidth]{articles/empirical/horse/media/image18.jpg}
+\centering \includegraphics[width=\columnwidth]{media/image18.jpg}
 \caption{\emph{Representative Hematoxylin-Eosin (H\&E) staining of 6-month harvested samples from cell-free osteochondral structures.}  CR = Remaining ceramic, NB = Newly formed bone, MEW = pattern of PCL-microfibers, * = Multifocal foci of inflammatory reaction, \# = artifact from cutting, EO = Eosinophil, L = Lymphocyte.}
 \label{fig:sup7}\end{figure}
+\end{adjustwidth}
 
 \end{document}

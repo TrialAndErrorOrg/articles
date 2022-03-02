@@ -97,7 +97,6 @@
 \newif\if@noabstract
 
 \newif\if@twocolumn
-\@twocolumntrue
 %% Add options for other journals here
 \DeclareOption{jote}{%
   \def\@jlogo{jabr-logo}%
@@ -126,7 +125,6 @@
 \DeclareOption{seplic}{
     \@seplictrue
 }
-
 
 %% Options for papertype
 
@@ -913,16 +911,21 @@ lower separated=false%
 
 \definecolor{pinky}{HTML}{f3e1ce}
 %% v1.4: Add two-column mode
-%\NewEnviron{frontmatter}{%
-%   \if@twocolumn
-%    \let\oldclearpage\clearpage
-%    \let\clearpage\relax
-%    \twocolumn[\@twocolumnfalse\setlength\parindent{2em}\BODY]%
-%    \let\clearpage\oldclearpage
-%   \else
-%     \BODY
-%   \fi%
-%}
+\NewEnviron{frontmatter}{%
+   \if@twocolumn
+    \let\oldclearpage\clearpage
+    \let\clearpage\relax
+    \ifdefvoid{\@fpfootnotes}{}{%
+       \begin{figure*}[b!]
+       \thefpfootnotes
+       \end{figure*}
+     }%
+    \twocolumn[\@twocolumnfalse\setlength\parindent{2em}\BODY]%
+    \let\clearpage\oldclearpage
+   \else
+     \BODY
+   \fi%
+}
 
 
 %%%%%
